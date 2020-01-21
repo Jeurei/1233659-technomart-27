@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Даниил Матвеев](https://up.htmlacademy.ru/htmlcss/27/user/1233659).
-* Наставник: `Неизвестно`.
+* Наставник: [Алёна Сиприкова](https://htmlacademy.ru/profile/asiprikova)
 
 ---
 
