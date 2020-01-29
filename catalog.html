@@ -9,7 +9,7 @@
         <div class="header-top">
           <div class="logo">
             <a href="./index.html">
-            <img src="./img" alt="technomart">
+            <img src="https://via.placeholder.com/220x47" alt="technomart">
             </a>
           </div>
           <div class="search">      <!--поиск-->
@@ -41,16 +41,26 @@
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             </p>
         </div>
-          <div class="user-block logged">              <!--юзер-->
-           <a class="user-name" href="">Равшан Джамшутович</a>
-           <ul class="user-nav">
-             <li>
-              <a href="">Мои заказы</a>
-             </li>
-            <li>
-              <a href="">Личный кабинет</a>
-            </li>
-           </ul>
+          <div class="user-block logged">
+            <div class="hidden" hidden>  <!--оберну в див чтобы поотом просто добавлять класс hidden и удалять у залогиненого юзера-->
+              <a class="login-btn" href="">
+                Войти
+               </a>
+              <a class="reg-btn" href="">
+                Регистрация
+               </a>
+            </div>
+            <div>          <!--юзер-->
+              <a class="user-name" href="">Равшан Джамшутович</a>
+              <ul class="user-nav">
+                <li>
+                  <a href="">Мои заказы</a>
+                </li>
+                <li>
+                  <a href="">Личный кабинет</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <nav class="main-nav">              <!--меню навигации-->
             <ul>
@@ -86,10 +96,10 @@
           </h1>
         </div>
         <div class="filter">
-          <h4>ФИЛЬТР:</h4>
+          <h4>Фильтр:</h4>
           <form>
             <fieldset>
-              <legend>ЦЕНА:</legend>
+              <legend>Цена:</legend>
               <div class="range-slider">      <!--была идея сделать двойной слайдер из двух range слайдеров но я не нашёл информации как их объединять -->
                 <input type="range" id="price-range">
                 </div>
@@ -100,19 +110,23 @@
 
             </fieldset>
             <fieldset>
-              <legend>ПРОИЗВОДИТЕЛИ:</legend>
-              <p><label> <input type=checkbox name="created-by" value="1" checked> BOSH </label></p>
-              <p><label> <input type=checkbox name="created-by" value="2"> ИНТЕРСКОЛ </label></p>
-              <p><label> <input type=checkbox name="created-by" value="3" checked> MAKITA </label></p>
-              <p><label> <input type=checkbox name="created-by" value="4"> DEWALT </label></p>
-              <p><label> <input type=checkbox name="created-by" value="5"> HITACHI </label></p>
+              <legend>Производители:</legend>
+              <ul class="filter-brands">
+                <li><input type="checkbox" name="bosh" id="bosh" value="1"><label for="bosh" checked>Bosh</label></li>
+                <li><input type="checkbox" name="interscol" id="interscol" value="2"><label for="interscol">Интерскол</label></li>
+                <li><input type="checkbox" name="makita" id="makita" value="3"  checked><label for="makita">Makita</label></li>
+                <li><input type="checkbox" name="dewalt" id="dewalt" value="4"><label for="dewalt">Dewalt</label></li>
+                <li><input type="checkbox" name="hitachi" id="hitachi" value="5"><label for="bosh">Hitachi</label></li>
+              </ul>
             </fieldset>
             <fieldset>
-              <legend>ПИТАНИЕ:</legend>
-              <p><label><input type="radio" name="source" value="1" required checked>АККУМУЛЯТОРНЫЕ</label>
-              <p><label><input type="radio" name="source" value="2" required>СЕТЕВЫЕ</label>
+              <legend>Питание:</legend>
+              <ul class="filter-source">
+                <li><input type="radio" name="source" id="accum" value="1" checked><label for="accum">Аккумуляторы</label></li>
+                <li><input type="radio" name="source" id="netw" value="2"><label for="netw">Сетевые</label></li>
+              </ul>
             </fieldset>
-            <input type="submit" value="ПОКАЗАТЬ">
+            <input type="submit" value="Показать">
           </form>
         </div>
         <div class="catalog">
@@ -224,7 +238,7 @@
         </div>
         <div class="about">
           <h2>
-            ПАРА СЛОВ О ПЕРФОРАТОРАХ
+            Пара слов о перфораторах
           </h2>
           <p>
             Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
@@ -236,7 +250,7 @@
       <footer>
         <div class="footer-top">          <!---->
           <div class="left">
-           <a href="./index.html"><img src="./img" alt="technomart"></a>
+           <a href="https://via.placeholder.com/220x68"><img src="./img" alt="technomart"></a>
            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             +7 (812) 555-05-55</p>
           </div>
@@ -322,5 +336,14 @@
          </div>
         </div>
        </footer>
+       <section class="modal" hidden>
+        <h2 class="hidden">Скрытые окна</h2>
+         <div id="popup-added" class="hidden">
+          <h3>Товар добавлен в корзину</h3>
+          <button class="close-button">закрыть</button>
+          <button class="continue">Продолжить покупки</button>
+          <a class="button" href="">Оформить заказ</a>
+         </div>
+       </section>
   </body>
 </html>
