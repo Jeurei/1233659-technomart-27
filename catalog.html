@@ -8,22 +8,23 @@
     <header>
         <div class="header-top">
           <div class="logo">
-            <a href="./index.html">
-            <img src="https://via.placeholder.com/220x47" alt="На главную сайта техномарт">
+            <a href="./index.html" aria-label="На главную магазина техномарт">
+            <img src="https://via.placeholder.com/220x47" width="220" height="47" alt="Ссылка на главную сайта техномарт">
             </a>
           </div>
           <div class="search">      <!--поиск-->
-            <form>
-              <input type="search" id="site-search" name="site-search" placeholder="Поиск">
+            <form method="POST">
+              <input type="search" id="site-search" name="site-search" placeholder="Поиск" role="search" aria-describedby="search-placeholder">
+              <p  id="search-placeholder" class="visually-hidden">Введите то что хотите найти на сайте техномарт</p>
             </form>
           </div>
-          <a class="marks" href="">
+          <a class="marks" href="" aria-label="Ссылка на страницу с закладками">
             Закладки:<span class="js-num">0</span>
           </a>
-          <a class="basket full-basket" href="">
+          <a class="basket full-basket" href="" aria-label="Ссылка на страницу с корзиной">
             Корзина<span class="js-num">10</span>
           </a>
-          <a class="ordering" href="">
+          <a class="ordering" href="" aria-label="Ссылка на страницу с оформлением заказа">
             Оформить заказ
           </a>
         </div>
@@ -37,40 +38,43 @@
           </div>
           <div class="data">
             <p>
-              <a href="tel:+7(812)555-05-55">+7(812)555-05-55</a>
+              <a href="tel:+7(812)555-05-55" aria-label="Ссылка на наш контактный телефон">+7(812)555-05-55</a>
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             </p>
         </div>
           <div class="user-block logged">
             <div class="hidden" hidden>  <!--оберну в див чтобы поотом просто добавлять класс hidden и удалять у залогиненого юзера-->
-              <a class="login-btn" href="">
+              <a class="login-button" href="" aria-label="Кнопка войти">
                 Войти
                </a>
-              <a class="reg-btn" href="">
+              <a class="reg-button" href="">
                 Регистрация
                </a>
             </div>
             <div>          <!--юзер-->
-              <a class="user-name" href="">Равшан Джамшутович</a>
+              <div class="user">
+                <a class="user-name" href="" aria-label="Ссылка на текущего пользователя">Равшан Джамшутович</a>
+                <a class="logout" aria-label="Выйти с аккаунта текущего пользователя">выйти</a>
+              </div>
               <ul class="user-nav">
                 <li>
-                  <a href="">Мои заказы</a>
+                  <a href="" aria-label="Ссылка на страницу с заказами текущего пользователя">Мои заказы</a>
                 </li>
                 <li>
-                  <a href="">Личный кабинет</a>
+                  <a href="" aria-label="Ссылка на страницу личного кабинета текущего пользователя">Личный кабинет</a>
                 </li>
               </ul>
             </div>
           </div>
           <nav class="main-nav">              <!--меню навигации-->
             <ul>
-              <li><a href="./index.html">Главная</a></li>
-              <li><a href="">Компания</a></li>
-              <li><a>Каталог</a></li>
-              <li><a href="">Новости</a></li>
-              <li><a href="">Спецпредложения</a></li>
-              <li><a href="">Доставка</a></li>
-              <li><a href="">Контакты</a></li>
+              <li><a href="./index.html" aria-label="Ссылка на главную">Главная</a></li>
+              <li><a href="" aria-label="Ссылка на страницу с информацией о комнании техномарт">Компания</a></li>
+              <li><a aria-label="Вы на находитесь в каталоге">Каталог</a></li>
+              <li><a href="" aria-label="Ссылка на страницу новостей компании техномарт">Новости</a></li>
+              <li><a href="" aria-label="Ссылка на страницу со спецпредложениями">Спецпредложения</a></li>
+              <li><a href="" aria-label="Ссылка на страницу с информацией по доставке">Доставка</a></li>
+              <li><a href="" aria-label="Ссылка на страницу с контактами компании техномарт">Контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -78,16 +82,16 @@
       <main>
         <ul class="breadcrumbs">
           <li>
-            <a href="./index.html">Домой</a>
+            <a href="./index.html" aria-label="Ссылка на главную">Домой</a>
           </li>
           <li>
-            <a>Каталог</a>
+            <a aria-label="Ссылка на страницу с каталогом">Каталог</a>
           </li>
           <li>
-            <a href="">Инструмент</a>
+            <a href="" aria-label="Ссылка на страницу с категорией инструменты">Инструмент</a>
           </li>
           <li>
-            <a>Перфораторы</a>
+            <a aria-label="Вы на странице подкатегории с перфораторами">Перфораторы </a>
           </li>
         </ul>
         <div class="catalog-header">
@@ -95,19 +99,18 @@
             Перфораторы
           </h1>
         </div>
-        <div class="filter">
-          <h4>Фильтр:</h4>
-          <form>
+        <section class="filter">
+          <h2>Фильтр</h2>
+          <form method="POST">
             <fieldset>
               <legend>Цена:</legend>
               <div class="range-slider">      <!--была идея сделать двойной слайдер из двух range слайдеров но я не нашёл информации как их объединять -->
                 <input type="range" id="price-range">
                 </div>
                 <div class="range-values">
-                <input type="number" id="range-value-lower" value="">
-                <input type="number" id="range-value-upper" value="">
+                <input type="number" id="range-value-lower" value="" aria-label="Цена от">
+                <input type="number" id="range-value-upper" value="" aria-label="Цена до">
                 </div>
-
             </fieldset>
             <fieldset>
               <legend>Производители:</legend>
@@ -128,115 +131,118 @@
             </fieldset>
             <button type="submit">Показать</button>
           </form>
-        </div>
-        <div class="catalog">
+        </section>
+        <section class="catalog">
+          <h2 class="visually-hidden">Каталог</h2>
           <div class="sorting-block">
-            <h4>Сортировка:</h4>
+            <h3>Сортировка:</h3>
             <ul class="sorting">
-             <li><a class="button">По цене</a></li>
-             <li><a class="button">По типу</a></li>
-             <li><a class="button">По функционалу</a></li>
-             <li><a class="button">вверх</a></li>
-             <li><a class="button">вниз</a></li>
+             <li><a class="button" aria-label="Отсортировать по цене">По цене</a></li>
+             <li><a class="button" aria-label="Отсортировать по типу">По типу</a></li>
+             <li><a class="button" aria-label="Отсортировать по функционалу">По функционалу</a></li>
+             <li><a class="button" aria-label="Отсортировать по возрастанию">вверх</a></li>
+             <li><a class="button" aria-label="Отсортировать по убыванию">вниз</a></li>
             </ul>
           </div>
           <div class="catalog-list">
+            <h3 class="visually-hidden">Каталог товаров</h3>
             <div class="item">
                 <div class="item-image">
-                  <img src="./img/jpgs/Perforator_3000.jpg" alt="Товар перфоратор бош 3000">
+                  <img src="https://via.placeholder.com/218x170" width="218" height="170" alt="Товар перфоратор бош 3000">
                 </div>
                 <div class="item-desc">
                   <span class="title">Перфоратор BOSCH BFG 3000</span>
                   <span class="old-price">22500 Р.</span>
                 </div>
-                <a class="buy">15500 Р.</a>
+                <a class="buy" aria-label="Кнопка добавить товар в корзину" aria-haspopup="true">15500 Р.</a>
             </div>
             <div class="item">
               <div class="item-image">
-                <img src="./img/jpgs/Perforator_6000.jpg" alt="Товар перфоратор бош 6000">
+                <img src="https://via.placeholder.com/218x170" width="218" height="170" alt="Товар перфоратор бош 6000">
               </div>
               <div class="item-desc ">
                 <span class="title">Перфоратор BOSCH BFG 6000</span>
                 <span class="old-price">30500 Р.</span>
               </div>
-            <a class="buy">25500 Р.</a>
+            <a class="buy" aria-label="Кнопка товар в корзину" aria-haspopup="true">25500 Р.</a>
           </div>
           <div class="item new">
               <div class="item-image">
-                <img src="./img/jpgs/Perforator_2000.jpg" alt="Товар перфоратор бош 2000">
+                <img src="https://via.placeholder.com/218x170" width="218" height="170" alt="Товар перфоратор бош 2000 новый товар">
               </div>
               <div class="item-desc">
                 <span class="title">Перфоратор BOSCH BFG 2000</span>
               </div>
-              <a class="buy">12500 Р.</a>
+              <a class="buy" aria-label="Кнопка добавить товар в корзину" aria-haspopup="true">12500 Р.</a>
           </div>
           <div class="item">
             <div class="item-image">
-              <img src="./img/jpgs/Perforator_3000.jpg" alt="Товар перфоратор бош 3000">
+              <img src="https://via.placeholder.com/218x170" width="218" height="170" alt="Товар перфоратор бош 3000">
             </div>
             <div class="item-desc">
               <span class="title">Перфоратор BOSCH BFG 3000</span>
               <span class="old-price">22500 Р.</span>
             </div>
-            <a class="buy">15500 Р.</a>
+            <a class="buy" aria-label="Кнопка добавить товар в корзину" aria-haspopup="true">15500 Р.</a>
           </div>
           <div class="item new">
             <div class="item-image">
-              <img src="./img/jpgs/Perforator_6000.jpg" alt="Товар перфоратор бош 6000">
+              <img src="https://via.placeholder.com/218x170" width="218" height="170" alt="Товар перфоратор бош 6000 новый товар">
             </div>
             <div class="item-desc ">
               <span class="title">Перфоратор BOSCH BFG 6000</span>
               <span class="old-price">30500 Р.</span>
             </div>
-            <a class="buy">25500 Р.</a>
+            <a class="buy" aria-label="Кнопка добавить товар в корзину" aria-haspopup="true">25500 Р.</a>
           </div>
           <div class="item">
             <div class="item-image">
-              <img src="./img/jpgs/Perforator_2000.jpg" alt="Товар перфоратор бош 2000">
+              <img src="https://via.placeholder.com/218x170" width="218" height="170" alt="Товар перфоратор бош 2000">
             </div>
             <div class="item-desc ">
               <span class="title">Перфоратор BOSCH BFG 2000</span>
             </div>
-            <a class="buy">12500 Р.</a>
+            <a class="buy" aria-label="Кнопка добавить товар в корзину" aria-haspopup="true">12500 Р.</a>
           </div>
           <div class="item new">
           <div class="item-image">
-            <img src="./img/jpgs/Perforator_3000.jpg" alt="Товар перфоратор бош 3000">
+            <img src="https://via.placeholder.com/218x170" width="218" height="170" alt="Товар перфоратор бош 3000 новый товар">
           </div>
           <div class="item-desc">
             <span class="title">Перфоратор BOSCH BFG 3000</span>
             <span class="old-price">22500 Р.</span>
           </div>
-          <a class="buy">15500 Р.</a>
+          <a class="buy" aria-label="Кнопка добавить товар в корзину" aria-haspopup="true">15500 Р.</a>
         </div>
         <div class="item">
           <div class="item-image">
-            <img src="./img/jpgs/Perforator_6000.jpg" alt="Товар перфоратор бош 6000">
+            <img src="https://via.placeholder.com/218x170" width="218" height="170" alt="Товар перфоратор бош 6000">
           </div>
           <div class="item-desc ">
             <span class="title">Перфоратор BOSCH BFG 6000</span>
             <span class="old-price">30500 Р.</span>
           </div>
-          <a class="buy">25500 Р.</a>
+          <a class="buy" aria-label="Кнопка добавить товар в корзину" aria-haspopup="true">25500 Р.</a>
         </div>
         <div class="item">
           <div class="item-image">
-            <img src="./img/jpgs/Perforator_2000.jpg" alt="Товар перфоратор бош 2000">
+            <img src="https://via.placeholder.com/218x170" width="218" height="170" alt="Товар перфоратор бош 2000">
           </div>
           <div class="item-desc">
             <span class="title">Перфоратор BOSCH BFG 2000</span>
           </div>
-          <a class="buy">12500 Р.</a>
+          <a class="buy" aria-label="Кнопка добавить товар в корзину" aria-haspopup="true">12500 Р.</a>
         </div>
         </div>
         <div class="pages">
-          <a class="page">1</a>
-          <a class="page" href="">2</a>
-          <a class="page" href="">3</a>
-          <a class="next" href="">Следующая</a>
+          <h3 clas="visually-hidden">Страницы каталога</h3>
+          <a class="page" aria-label="Ссылка на страницу номер 1">1</a>
+          <a class="page" href="" aria-label="Ссылка на страницу номер 2">2</a>
+          <a class="page" href="" aria-label="Ссылка на страницу номер 3">3</a>
+          <a class="next" href="" aria-label="Ссылка на следующую страницу">Следующая</a>
         </div>
-        </div>
-        <div class="about">
+        </section>
+        <section class="about">
           <h2>
             Пара слов о перфораторах
           </h2>
@@ -245,61 +251,61 @@
             Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
             В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
           </p>
-        </div>
+        </section>
       </main>
       <footer>
         <div class="footer-top">          <!---->
           <div class="left">
-           <a href="./index.html"><img src="https://via.placeholder.com/220x68" alt="На главную сайта техномарт"></a>
+           <a href="./index.html"><img src="https://via.placeholder.com/220x68" width="220" height="68" alt="На главную сайта техномарт"></a>
            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-            +7 (812) 555-05-55</p>
+            <a href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a></p>
           </div>
           <div class="right">
               <ul class="top">
                 <li>
-                  <a href="">
+                  <a href="" aria-label="Ссылка на страницу информацией о компании техномарт" >
                    Компания
                   </a>
                 </li>
                 <li>
-                 <a href="">
+                 <a href="" aria-label="Ссылка на страницу с новостями компании техномарт">
                   Новости
                  </a>
                </li>
                <li>
-                 <a>
+                 <a aria-label="Вы на странице каталога">
                   Каталог
                  </a>
                </li>
                <li>
-                 <a href="">
+                 <a href="" aria-label="Ссылка на страницу с информацией по доставке">
                   Доставка
                  </a>
                </li>
                <li>
-                 <a href="">
+                 <a href="" aria-label="Ссылка на страницу с контактами">
                   Контакты
                  </a>
                </li>
               </ul>
              <ul class="bottom">
                <li>
-                 <a href="">
+                 <a href="" aria-label="Ссылка на категорию с материалами">
                   Материалы
                  </a>
                </li>
                <li>
-                 <a href="">
+                 <a href="" aria-label="Ссылка на категорию с техникой">
                   Техника
                  </a>
                </li>
                <li>
-                 <a href="">
+                 <a href="" aria-label="Ссылка на категорию с инструментами">
                   Инструмент
                  </a>
                </li>
                <li>
-                 <a href="">
+                 <a href="" aria-label="Ссылка на категорию со спецпредложениями">
                   Спецпредложения
                  </a>
                </li>
@@ -312,9 +318,9 @@
              Все права защищены
            </p>
            <ul class="socials">
-             <li><a class="social-button-vk" href="">vk</a></li>
-             <li><a class="social-button-fb" href="">fb</a></li>
-             <li><a class="social-button-inst" href="">inst</a></li>
+             <li><a class="social-button-vk" href="" aria-label="Ссылка на нашу группу во ВКонтакте">vk</a></li>
+             <li><a class="social-button-fb" href="" aria-label="Ссылка на страницу в Фейсбуке">fb</a></li>
+             <li><a class="social-button-inst" href="" aria-label="Ссылка на страницу в Инстаграмме">inst</a></li>
            </ul>
          <div class="comm">
            <div class="feedback">
@@ -326,23 +332,23 @@
              </p>
            </div>
            <div class="links">
-             <a href="">
+             <a href="" aria-label="Почта разработчика сайта">
                mail@htmlacademy.ru
              </a>
-             <a href="">
+             <a href="" aria-label="Сайт разработчика сайта">
                htmlacademy.ru
              </a>
            </div>
          </div>
         </div>
        </footer>
-       <section class="modal" hidden>
-        <h2 class="hidden">Скрытые окна</h2>
-         <div id="popup-added" class="hidden">
+       <section class="modal">
+        <h2 class="visually-hidden">Скрытые окна</h2>
+         <div id="popup-added" class="hidden" hidden>
           <h3>Товар добавлен в корзину</h3>
-          <button class="close-button">закрыть</button>
-          <button class="continue">Продолжить покупки</button>
-          <a class="button" href="">Оформить заказ</a>
+          <button class="close-button" aria-label="Кнопка закрыть попап с добавлением в корзину">закрыть</button>
+          <button class="continue" aria-label="Кнопка продолжить покупки">Продолжить покупки</button>
+          <a class="button" href=""  aria-label="Ссылка на страницу с оформлением заказа">Оформить заказ</a>
          </div>
        </section>
   </body>

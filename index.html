@@ -10,54 +10,58 @@
     <header>
       <div class="header-top">
         <div class="logo">
-          <a href="index.html"><img src="https://via.placeholder.com/220x47" alt="На главную сайта Техномарт"></a>
+          <a href="index.html"><img src="https://via.placeholder.com/220x47" width="220" height="47" alt="На главную сайта Техномарт"></a>
         </div>
         <div class="search">
-          <form>
-            <input type="search" id="site-search" name="site-search" placeholder="Поиск">
+          <form method="post">
+            <input type="search" id="site-search" name="site-search" placeholder="Поиск" aria-describedby="search-placeholder">
+            <p  id="search-placeholder" class="visually-hidden">Введите то что хотите найти на сайте техномарт</p>
           </form>              <!--поиск-->
         </div>
-        <a class="marks" href="" aria-label="">
+        <a class="marks" href="" aria-label="Ссылка на страницу с закладками">
           Закладки:<span class="js-num">0</span>
         </a>
-        <a class="basket" href="">
+        <a class="basket" href="" aria-label="Ссылка на страницу корзины">
           Корзина:<span class="js-num">0</span>
         </a>
-        <a class="ordering" href="">
+        <a class="ordering" href="" aria-label="Ссылка на страницу оформления заказа">
           Оформить заказ
         </a>
       </div>
       <div class="header-bottom">
         <div class="title">
-          <p>
+          <h1>
             Интернет-магазин
             строительных материалов
             и инструментов для ремонта
-          </p>
+          </h1>
         </div>
         <div class="data">
           <p>
-            <a href="tel:+7(812)555-05-55">+7(812)555-05-55</a>
+            <a href="tel:+7(812)555-05-55" aria-label="Ссылка на наш контактный телефон">+7(812)555-05-55</a>
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </p>
       </div>
         <div class="user-block">
         <div>  <!--оберну в див чтобы поотом просто добавлять класс hidden и удалять у залогиненого юзера-->
-         <a class="login-btn" href="">
+         <a class="login-button" href="" aria-label="Кнопка войти">
            Войти
           </a>
-         <a class="reg-btn" href="">
+         <a class="reg-button" href="" aria-label="Кнопка регистрации">
            Регистрация
           </a>
         </div>
         <div class="hidden" hidden>
-          <a class="user-name" href="">Равшан Джамшутович</a>
+          <div class="user">
+          <a class="user-name" href="" aria-label="Ссылка на текущего пользователя">Равшан Джамшутович</a>
+          <a class="logout" aria-label="Выйти с аккаунта текущего пользователя">выйти</a>
+        </div>
            <ul class="user-nav">
              <li>
-              <a href="">Мои заказы</a>
+              <a href="" aria-label="Ссылка на страницу заказов текущего пользователя">Мои заказы</a>
              </li>
             <li>
-              <a href="">Личный кабинет</a>
+              <a href="" aria-label="Ссылка на личный кабинет текущего пользователя">Личный кабинет</a>
             </li>
            </ul>
         </div>
@@ -65,37 +69,37 @@
         <nav class="main-nav">              <!--меню навигации-->
           <ul>
             <li>
-              <a>
+              <a aria-label="Вы на главной">
               Главная
             </a>
           </li>
             <li>
-              <a href="">
+              <a href="" aria-label="Ссылка на страницу с описанием компании техномарт">
                 Компания
               </a>
             </li>
             <li>
-              <a href="./catalog.html">
+              <a href="./catalog.html" aria-label="Ссылка на каталог магазина техномарт">
                 Каталог
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="" aria-label="Ссылка на новости компании техномарт">
               Новости
             </a>
           </li>
             <li>
-              <a href="">
+              <a href="" aria-label="Ссылка на страницу со специпредложениями">
                 Спецпредложения
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="" aria-label="Ссылка на страницу с информацией по доставке">
                 Доставка
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="" aria-label="Ссылка на страницу с контактами">
                 Контакты
               </a>
             </li>
@@ -105,17 +109,18 @@
     </header>
     <main>
       <section class="categories">
+        <h2 class="visually-hidden">Категории</h2>
         <div class="category new">
           <h3>Материалы</h3>
-          <a class="button" >На любой вкус</a>
+          <a class="button"  aria-label="Ссылка на категорию с материалами">На любой вкус</a>
         </div>
         <div class="category">
           <h3>Инструмент</h3>
-          <a class="button" >На все случаи</a>
+          <a class="button" aria-label="Ссылка на категорию с инструментами">На все случаи</a>
         </div>
         <div class="category">
           <h3>Техника</h3>
-          <a class="button" >Для стройки</a>
+          <a class="button" aria-label="Ссылка на технику для стройки">Для стройки</a>
         </div>
         <div class="slider">
           <input type="radio" id="button-1" name="toogle-slider" checked>
@@ -124,8 +129,8 @@
             <label for="button-1"></label>
             <label for="button-2"></label>
           </div>
-          <button type="button" class="arrow-left">влево</button>
-          <button type="button" class="arrow-right">вправо</button>
+          <button type="button" class="arrow-left"  aria-label="Кнопка переключения слайдера влево">влево</button>
+          <button type="button" class="arrow-right" aria-label="Кнопка переключения слайдера вправо">вправо</button>
           <div class="slides">
             <div class="slide">
               <div class="text">
@@ -133,7 +138,7 @@
                   Перфораторы
                 </h3>
                 <p>Настоящие мужские игрушки</p>
-                <a class="button" href="./catalog.html">Открыть каталог</a>"
+                <a class="button" href="./catalog.html" aria-label="Ссылка на страницу каталога">Открыть каталог</a>"
               </div>
             </div>
               <div class="slide">
@@ -142,96 +147,96 @@
                     Дрели
                   </h3>
                   <p>Соседям на радость!</p>
-                  <a class="button" href="./catalog.html">Открыть каталог</a>"
+                  <a class="button" href="./catalog.html" aria-label="Ссылка на страницу каталога">Открыть каталог</a>"
                 </div>
             </div>
           </div>
         </div>
         <div class="category">
           <h3>Скидки</h3>
-          <a class="button" >На 350 товаров</a>
+          <a class="button" aria-label="Ссылка на категорию со скидками">На 350 товаров</a>
         <div class="category">
           <h3>Доставка</h3>
-          <a class="button" >Бесплатно</a>
+          <a class="button" aria-label="Ссылка на категорию с товарами для который имеется бесплатная доставка">Бесплатно</a>
         </div>
       </div>
       </section>
       <section class="populars">
         <div class="title-block">
-          <h3>Популярные товары:</h3>
-          <a class="button" href="">Все популярные товары</a>
+          <h2>Популярные товары:</h2>
+          <a class="button" href="" aria-label="Ссылка на все популярные товары">Все популярные товары</a>
         </div>
         <div class="populars-list">
           <div class="item">
             <div class="item-image">
-              <img src="./img/jpgs/Perforator_9000.jpg" alt="Товар перфоратор бош 9000">
+              <img src="https://via.placeholder.com/218x170" width="218" height="170" alt="Товар перфоратор бош 9000">
             </div>
             <div class="item-desc">
               <span class="title">Перфоратор BOSCH BFG 9000</span>
               <span class="old-price">32500 Р.</span>
             </div>
-            <a class="buy">25500 Р.</a>
+            <a class="buy" aria-label="Кнопка добавить в корзину" aria-haspopup="true">25500 Р.</a>
         </div>
         <div class="item">
           <div class="item-image">
-            <img src="./img/jpgs/Perforator_3000.jpg" alt="Товар перфоратор бош 3000">
+            <img src="https://via.placeholder.com/218x170" width="218" height="170" alt="Товар перфоратор бош 3000">
           </div>
           <div class="item-desc">
             <span class="title">Перфоратор BOSCH BFG 3000</span>
             <span class="old-price">22500 Р.</span>
           </div>
-          <a class="buy">15500 Р.</a>
+          <a class="buy" aria-label="Кнопка добавить в корзину" aria-haspopup="true">15500 Р.</a>
         </div>
         <div class="item">
           <div class="item-image">
-            <img src="./img/jpgs/Perforator_6000.jpg" alt="Товар перфоратор бош 6000">
+            <img src="https://via.placeholder.com/210x170" width="218" height="170" alt="Товар перфоратор бош 6000">
           </div>
           <div class="item-desc">
             <span class="title">Перфоратор BOSCH BFG 6000</span>
             <span class="old-price">30500 Р.</span>
           </div>
-          <a class="buy">25500 Р.</a>
+          <a class="buy" aria-label="Кнопка добавить в корзину" aria-haspopup="true">25500 Р.</a>
         </div>
-        <div class="item">
+        <div class="item new">
           <div class="item-image">
-            <img src="./img/jpgs/Perforator_2000.jpg" alt="Товар перфоратор бош 2000">
+            <img src="https://via.placeholder.com/210x170" width="218" height="170" alt="Товар перфоратор бош 2000 новый товар">
           </div>
           <div class="item-desc">
             <span class="title">Перфоратор BOSCH BFG 2000</span>
           </div>
-          <a class="buy">12500 Р.</a>
+          <a class="buy" aria-label="Кнопка добавить в корзину" aria-haspopup="true">12500 Р.</a>
         </div>
         </div>
       </section>
       <section class="brands">
         <div class="title-block">
           <h2>Популярные производители:</h2>
-          <a class="button" href="">Все производители</a>
+          <a class="button" href="" aria-label="Сслыка на всех производителей">Все производители</a>
         </div>
         <ul>
           <li><a href="">
-            <img src="./img/pngs/bosch.png" alt="Перейти в категорию брэнда бош">
+            <img src="https://via.placeholder.com/126x37" width="126" height="37" alt="Перейти в категорию брэнда бош">
           </a></li>
           <li><a href="">
-            <img src="./img/pngs/makita.png" alt="Перейти в категорию брэнда макита">
+            <img src="https://via.placeholder.com/123x40" width="123" height="40" alt="Перейти в категорию брэнда макита">
           </a></li>
           <li><a href="">
-            <img src="./img/pngs/dewalt.png" alt="Перейти в категорию брэнда деволт">
+            <img src="https://via.placeholder.com/146x44" width="146" height="44" alt="Перейти в категорию брэнда деволт">
           </a></li>
           <li><a href="">
-            <img src="./img/pngs/interskol.png" alt="Перейти в категорию брэнда интерскол">
+            <img src=".https://via.placeholder.com/200x88" width="200" height="88" alt="Перейти в категорию брэнда интерскол">
           </a></li>
           <li><a href="">
-            <img src="./img/pngs/hitachi.png" alt="Перейти в категорию брэнда хитачи">
+            <img src="https://via.placeholder.com/169x31" width="169" height="31" alt="Перейти в категорию брэнда хитачи">
           </a></li>
           <li><a href="">
-            <img src="./img/pngs/LG.png" alt="Перейти в категорию брэнда ЭлДжи">
+            <img src="https://via.placeholder.com/121x73" width="121" height="73" alt="Перейти в категорию брэнда ЭлДжи">
           </a></li>
           <li><a href="">
-            <img src="./img/pngs/AEG.png" alt="Перейти в категорию брэнда ЭйАйДжи">
+            <img src="https://via.placeholder.com/151x96" width="151" height="96" alt="Перейти в категорию брэнда ЭйАйДжи">
           </a></li>
           <li><a href="">
-            <img src="./img/pngs/metabo.png" alt="Перейти в категори брэнда митабо">
+            <img src="https://via.placeholder.com/204x69" width="204" height="69" alt="Перейти в категори брэнда митабо">
           </a></li>
         </ul>
       </section>
@@ -241,9 +246,9 @@
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="servises-block">
           <div class="servises-block-left">
-          <button type="button" id="serv-button-1" name="services-toogle">Доставка</button>
-          <button type="button" id="serv-button-2" name="services-toogle">Гарантия</button>
-          <button type="button" id="serv-button-3" name="services-toogle">Кредит</button>
+          <button type="button" id="serv-button-1" name="services-toogle" aria-label="Кнопка показать информацию по доставке">Доставка</button>
+          <button type="button" id="serv-button-2" name="services-toogle" aria-label="Кнопка показать информацию по гарантии">Гарантия</button>
+          <button type="button" id="serv-button-3" name="services-toogle" aria-label="Кнопка показать информацию по кредиту">Кредит</button>
           </div>
         <div class="servises-block-right">
           <div class="servises-delivery">
@@ -253,29 +258,30 @@
               Ведь мы неплохо заработаем,<br>
               поднимая его на ваш этаж!</p>
           </div>
-          <div class="servises-gurantee" hidden>
+          <div class="servises-gurantee visually-hidden">
             <h3>Гарантия</h3>
             <p>Если купленный у нас товар поломается или заискрит,<br>
               а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии.
               Мы обменяем сгоревший товар на новый.<br>
               Дом уж восстановите как-нибудь сами.</p>
           </div>
-          <div class="servises-credit" hidden>
+          <div class="servises-credit visually-hidden">
             <h3>Кредит</h3>
             <p>Если купленный у нас товар поломается или заискрит,<br>
               а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии.
               Мы обменяем сгоревший товар на новый.<br>
               Дом уж восстановите как-нибудь сами.</p>
-              <a class="button" href="">Отправить заявку</a>
+              <a class="button" href="" aria-label="Кнопка отправить заявку">Отправить заявку</a>
         </div>
         </div>
         </div>
       </section>
       <section class="about">
+        <h2 class="visually-hidden">О компании</h2>
         <div class="info">
-          <h2>
+          <h3><!--Стоит ли это делать h2?-->
             Компания «Техномарт»
-          </h2>
+          </h3>
           <p>
             Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.
           </p>
@@ -296,78 +302,78 @@
               </li>
             </ul>
           </div>
-          <a class="btn" href="">
+          <a class="button" href="" aria-label="Ссылка на информацию о компании">
             Подробнее о компании
           </a>
         </div>
         <div class="contacts">
-          <h2>
-            Котнтакты
-          </h2>
+          <h3>
+            Контакты
+          </h3>
           <p>
             Вы можете забрать товар сами,
             заехав в наш офис:
           </p>
-          <a class="js-map" href="">
-            <img src="./img/jpgs/map.jpg" alt="Офис компании по адресу Большая Конюшенная 19 Санкт-Петурбург">
+          <a class="js-map" href="" aria-label="Кнопка открыть полноразмерную карту" aria-haspopup="true">
+            <img src="https://via.placeholder.com/300x158" width="300" height="158" alt="Офис компании по адресу Большая Конюшенная 19 Санкт-Петурбург">
           </a>
-          <a class="button">Заблудились?Напишите нам!</a>
+          <a class="button" aria-label="Кнопка открытия формы обратной связи" aria-haspopup="true">Заблудились?Напишите нам!</a>
         </div>
       </section>
     </main>
     <footer>
       <div class="footer-top">          <!---->
         <div class="left">
-         <a href="./index.html"><img src="https://via.placeholder.com/220x68" alt="На главную сайта Техномарт"></a>
+         <a href="./index.html"><img src="https://via.placeholder.com/220x68" width="220" height="68" alt="На главную сайта Техномарт"></a>
          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-          +7 (812) 555-05-55</p>
+          <a href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a></p>
         </div>
         <div class="right">
             <ul class="top">
               <li>
-                <a href="">
+                <a href="" aria-label="Ссылка на страницу о компании техномарт">
                  Компания
                 </a>
               </li>
               <li>
-               <a href="">
+               <a href="" aria-label="Ссылка на страницу с новостями компании техномарт">
                 Новости
                </a>
              </li>
              <li>
-               <a>
+               <a href="./catalog.html" aria-label="Ссылка на страницу каталога магазина техномарт">
                 Каталог
                </a>
              </li>
              <li>
-               <a href="">
+               <a href="" aria-label="Ссылка на страницу с информации по доставке">
                 Доставка
                </a>
              </li>
              <li>
-               <a href="">
+               <a href="" aria-label="Ссылка на страницу с контактами">
                 Контакты
                </a>
              </li>
             </ul>
            <ul class="bottom">
              <li>
-               <a href="">
+               <a href="" aria-label="Ссылка на категорию с материалами">
                 Материалы
                </a>
              </li>
              <li>
-               <a href="">
+               <a href="" aria-label="Ссылка на категорию с техникой">
                 Техника
                </a>
              </li>
              <li>
-               <a href="">
+               <a href="" aria-label="Ссылка на категорию с инструментами">
                 Инструмент
                </a>
              </li>
              <li>
-               <a href="">
+               <a href="" aria-label="Ссылка на категорию со спецпредложениями">
                 Спецпредложения
                </a>
              </li>
@@ -380,9 +386,9 @@
            Все права защищены
          </p>
          <ul class="socials">
-           <li><a class="social-button-vk" href="">vk</a></li>
-           <li><a class="social-button-fb" href="">fb</a></li>
-           <li><a class="social-button-inst" href="">inst</a></li>
+           <li><a class="social-button-vk" href="" aria-label="Ссылка на нашу группу во ВКонтакте">vk</a></li>
+           <li><a class="social-button-fb" href="" aria-label="Ссылка на нашу страницу в Фейсбуке">fb</a></li>
+           <li><a class="social-button-inst" href="" aria-label="Ссылка на нашу страницу в Инстаграмме">inst</a></li>
          </ul>
        <div class="comm">
          <div class="feedback">
@@ -394,29 +400,30 @@
            </p>
          </div>
          <div class="links">
-           <a href="">
+           <a href="" aria-label="Почта разработчика сайта">
              mail@htmlacademy.ru
            </a>
-           <a href="">
+           <a href="" aria-label="Сайт разработчика сайта">
              htmlacademy.ru
            </a>
          </div>
        </div>
       </div>
      </footer>
-     <section class="modal" hidden>
-     <h2 class="hidden">Скрытые окна</h2>
-      <div id="modal-map" class="hidden" style="width:940px; height:446px;"> <!--940x446-->
-        <button type="button" class="close-button">закрыть</button>
+     <section class="modal">
+     <h2 class="visually-hidden">Скрытые окна</h2>
+      <div id="modal-map" class="hidden" style="width:940px; height:446px;" hidden> <!--940x446-->
+        <button type="button" class="close-button" aria-label="Кнопка закрыть интерактивную карту">закрыть</button>
       </div>
-      <div id="contact-form" class="hidden">
-        <form>
+      <div id="contact-form" class="hidden" hidden>
+        <form method="POST">
           <label for="name-field">Ваша имя:</label>
-          <input type="text" name="name-field" id="name-field" placeholder="Имя фамилия" required>
+          <input type="text" name="name-field" id="name-field" placeholder="Имя фамилия" aria-required="true" required>
           <label for="email-field">Ваш e-mail:</label>
-          <input type="email" name="email-field" id="email-field" lang="en" size="30" placeholder="email@example.com" required>
-          <p><textarea rows=10 cols=45 name="text" placeholder="В свободной форме"></textarea></p>
-          <button type="submit">Показать</button>
+          <input type="email" name="email-field" id="email-field" lang="en" size="30" placeholder="email@example.com" aria-required="true" required>
+          <p><textarea rows=10 cols=45 name="text" placeholder="В свободной форме" aria-describedby="textarea-placeholder"></textarea></p>
+          <p id="textarea-placeholder" class="visually-hidden">Введите ваше сообщение в свободной форме</p>
+          <button type="submit" aria-label="Кнопка отправить форму с письмом">Отправить</button>
         </form>
       </div>
      </section>

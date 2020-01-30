@@ -1,6 +1,6 @@
 let coordinates=[59.938549,30.322849]
 function initMap (ymaps) {
-  var myMap = new ymaps.Map(document.getElementById("modal-map"), {
+  var myMap = new ymaps.Map(document.querySelector(".modal-map"), {
       center: coordinates,
       zoom: 17
   }),
