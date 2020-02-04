@@ -2,6 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <title>HTML Academy: Техномарт</title>
     <script src="./js/map.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=6deaa343-00b8-4c42-b56f-c894454a66d9&lang=ru_RU&onload=initMap" async defer></script>
@@ -10,13 +14,13 @@
     <header>
       <div class="header-top">
         <div class="logo">
-          <a href="index.html"><img src="./img/logo/logo-technomart.svg" width="220" height="47" alt="На главную сайта Техномарт"></a>
+          <a href="index.html"><img src="./img/logo/logo-technomart.svg" alt="На главную сайта Техномарт"></a>
         </div>
         <div class="search">
           <form method="post">
             <input type="search" id="site-search" name="site-search" placeholder="Поиск" aria-describedby="search-placeholder">
             <p  id="search-placeholder" class="visually-hidden">Поиск</p>
-            <button type="submit" aria-label="Кнопка поиска"></button>
+            <button type="submit" class="button" aria-label="Кнопка поиска"></button>
           </form>              <!--поиск-->
         </div>
         <a class="marks" href="" aria-label="Ссылка на страницу с закладками">
@@ -116,8 +120,8 @@
             <label for="button-1"></label>
             <label for="button-2"></label>
           </div>
-          <button type="button" class="arrow-left"  aria-label="Кнопка переключения слайдера влево">влево</button>
-          <button type="button" class="arrow-right" aria-label="Кнопка переключения слайдера вправо">вправо</button>
+          <button type="button" class="button" class="arrow-left"  aria-label="Кнопка переключения слайдера влево">влево</button>
+          <button type="button" class="button" class="arrow-right" aria-label="Кнопка переключения слайдера вправо">вправо</button>
           <div class="slides">
             <div class="slide">
               <div class="text">
@@ -233,9 +237,9 @@
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="servises-block">
           <div class="servises-block-left">
-          <button type="button" id="serv-button-1" name="services-toogle" aria-label="Кнопка показать информацию по доставке">Доставка</button>
-          <button type="button" id="serv-button-2" name="services-toogle" aria-label="Кнопка показать информацию по гарантии">Гарантия</button>
-          <button type="button" id="serv-button-3" name="services-toogle" aria-label="Кнопка показать информацию по кредиту">Кредит</button>
+          <button type="button" class="serv-button-1" name="services-toogle" aria-label="Кнопка показать информацию по доставке">Доставка</button>
+          <button type="button" class="serv-button-2" name="services-toogle" aria-label="Кнопка показать информацию по гарантии">Гарантия</button>
+          <button type="button" class="serv-button-3" name="services-toogle" aria-label="Кнопка показать информацию по кредиту">Кредит</button>
           </div>
         <div class="servises-block-right">
           <div class="servises-delivery">
@@ -413,7 +417,7 @@
           <input type="email" name="email-field" id="email-field" lang="en" size="30" placeholder="email@example.com" aria-required="true" required>
           <p><textarea rows=10 cols=45 name="text" placeholder="В свободной форме" aria-describedby="textarea-placeholder"></textarea></p>
           <p id="textarea-placeholder" class="visually-hidden">Введите ваше сообщение в свободной форме</p>
-          <button type="submit" aria-label="Кнопка отправить форму с письмом">Отправить</button>
+          <button type="submit" class="button" aria-label="Кнопка отправить форму с письмом">Отправить</button>
         </form>
       </div>
      </section>
