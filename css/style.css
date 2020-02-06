@@ -306,6 +306,9 @@ a{
   font-family:"PT Sans",Arial, Helvetica, sans-serif;
 
 }
+.breadcrumbs:first-child::before{
+  content:url(../img/icons/icon-home.svg)
+}
 .breadcrumbs a{
   color:#000;
   font-size:13px;
