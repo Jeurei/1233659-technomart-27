@@ -1,0 +1,460 @@
+body{
+  padding:0;
+  margin:0;
+  font-family:"Cuprum",Arial,sans-serif;
+  font-size:13px;
+  line-height:24px;
+  color:#000;
+}
+a{
+  text-decoration:none;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+.hidden{
+  display:none;
+}
+.header-top{
+  background-color:#293449;
+  font-size:17px;
+}
+.header-top input[type="search"]{
+  position: relative;
+  background-color:#293449;
+  border:none;
+}
+.header-top input[type="search"]:hover,
+.header-top a:hover{
+  background-color:#212a3a;
+}
+.header-top input[type="search"]:focus{
+  background-color:#fff;
+}
+/* Как реализовать эту иконку? Как у неё цвет менять? */
+.header-top button{
+  background-color:transparent;
+  border:none;
+  width:17px;
+  height:17px;
+  background:url(../img/icons/icon-search.svg) no-repeat center;
+}
+.header-top a{
+  color:#fff;
+}
+.header-top a:active{
+  color:#999ca1;
+  background-color:#161d29;
+}
+.header-top-ordering{
+  background-color:#63a63e;
+}
+.header-top .header-top-ordering:hover{
+  background-color:#5fbb2d;
+}
+.header-top .header-top-ordering:active{
+  color:#a8c29a;
+  background-color:#518534;
+}
+.header-top-logo img{
+  background-color:#e03643;
+}
+.header-top-logo img:hover{
+  background-color:#ca2c37;
+}
+.header-top-logo img:active{
+  color:#faf0f1;
+  background-color:#ba2732;
+}
+.header-top-logo a:hover,
+.header-top-logo a:active{
+  background:none;
+}
+.header-top-marks::before{
+  content:url(../img/icons/icon-bookmark.svg);
+  opacity:0.3;
+}
+.header-top-marks:hover::before{
+  opacity:1;
+}
+.header-top-basket::before{
+  content:url(../img/icons/icon-cart.svg);
+  opacity:0.3;
+}
+.header-top-basket:hover::before{
+  opacity:1;
+}
+.header-bottom{
+  background-color:#f1f5f7;
+}
+.header-bottom h1{
+  color:#ee3643;
+  font-style: italic;
+  font-size:16px;
+  line-height:23px;
+}
+.header-bottom-data a{
+  color:#e9292a;
+  font-size:21px;
+  font-weight: bold;
+  line-height:21px;
+  border:3px solid #fff;
+}
+.header-bottom-data a::before{
+  width:19px;
+  height:19px;
+  content:url(../img/icons/icon-phone.svg)
+}
+.header-bottom-data p{
+  color:#32425c;
+  font-size:14px;
+}
+.header-bottom-user ul{
+  list-style:none;
+  margin:0;
+  padding-left:0;
+}
+.header-bottom-user a{
+  color:#000;
+  background-color:#fff;
+  font-size:21px;
+}
+.header-bottom-user a:hover{
+  color:#ee3643;
+}
+.header-bottom-user a:active{
+  color:#c7c7c7;
+}
+.header-bottom-user .login-button::before{
+  content:url(../img/icons/icon-login.svg);
+}
+.user-name::before{
+ content:url(../img/icons/icon-user.svg);
+
+}
+.user-name:hover::before{
+  /* Как раскрасить?!  */
+}
+.user-name a:hover{
+  color:#000;
+}
+.user .logout::before{
+  content: url(../img/icons/icon-logout.svg);
+}
+.user-nav a{
+  background-color:transparent;
+  color:#32425c;
+  font-size:16px;
+  text-decoration:underline;
+}
+.user-nav a:active{
+  color:#b7bfc8;
+}
+.header-bottom-nav{
+  background-color:#32425c;
+}
+.header-bottom-nav ul{
+  list-style:none;
+  margin:0;
+  padding-left:0;
+}
+.header-bottom-nav a{
+  color:#fff;
+  font-size:17px;
+}
+.header-bottom-nav a:hover{
+  background-color:#293449;
+}
+.header-bottom-nav a:active{
+  color:#777d88;
+  background-color:#1d2739;
+}
+.button{
+  color:#fff;
+  font-size:14px;
+  line-height:18px;
+  background-color:#ee3643;
+}
+.info p,
+.contacts p{
+  font-family: "PT Sans",Arial,sans-serif;
+  font-size:13px;
+}
+.info h3,
+.contacts h3{
+  font-size:30px;
+  line-height:30px;
+  text-transform:uppercase;
+  font-weight:100;
+}
+.info ul{
+  list-style: none;
+  font-size:18px;
+  line-height:20px;
+  margin:0;
+  padding-left:0;
+}
+.features-list li{
+  margin-left:36px;
+}
+.features-list li::before{
+  content: "";
+  position: absolute;
+  left:5px;
+  /* мне кажется решение с отступом совсем неправильно,помогите */
+  margin-top:7px;
+  width:25px;
+  height:2px;
+  background-color:#ee3643;
+}
+.footer-top{
+  background-color:#32425c;
+  color:#fff;
+  font-size:18px;
+}
+.footer-top a{
+  color:#fff;
+}
+.left img{
+  background-color:#ee3643;
+}
+.right ul{
+  list-style:none;
+  margin:0;
+  padding-left:0;
+}
+.bottom a{
+  color:#ffd180;
+}
+.top a:hover,
+.bottom a:hover{
+  text-decoration:underline;
+}
+.top a:active{
+  text-decoration:none;
+  color:#929caa;
+}
+.bottom a:active{
+  text-decoration:none;
+  color:#998a6e;
+}
+.footer-bottom{
+ background-color:#293449;
+ color:#fff;
+ font-size:16px;
+}
+.footer-bottom ul{
+  list-style:none;
+  margin:0;
+  padding-left:0;
+}
+.footer-bottom-socials li{
+  /* правильный дисплей? */
+  display: inline;
+}
+.social{
+  display: inline-block;
+  width:42px;
+  height:42px;
+  border-radius: 50%;
+  background-color:#212a3a;
+}
+.social-button-vk{
+  background-image:url(../img/icons/socials/icon-vk.svg);
+  background-repeat: no-repeat;
+  background-position:center;
+}
+.social-button-fb{
+  background-image:url(../img/icons/socials/icon-fb.svg);
+  background-repeat: no-repeat;
+  background-position:center;
+}
+.social-button-inst{
+  background-image:url(../img/icons/socials/icon-insta.svg);
+  background-repeat: no-repeat;
+  background-position:center;
+}
+.social:hover{
+  background-color:#ee3643;
+}
+.social:active{
+  background:#ee3643;
+}
+
+.footer-bottom-links a{
+  color:#ffd180;
+}
+.footer-bottom-links a:hover{
+  text-decoration:underline;
+}
+.footer-bottom-links a:active{
+  text-decoration:none;
+  color:#ee3643;
+}
+.breadcrumbs{
+  list-style:none;
+  margin:0;
+  padding-left:0;
+  font-family:"PT Sans",Arial, Helvetica, sans-serif;
+
+}
+.breadcrumbs a{
+  color:#000;
+  font-size:13px;
+}
+.catalog-header{
+  background-color:#f2f6f8;
+}
+.catalog-header h1{
+  font-size:30px;
+  line-height:30px;
+  text-transform: uppercase;
+  font-weight:500;
+  color:#32425c;
+}
+.filter,
+.catalog{
+  font-family: "PT Sans",Arial, sans-serif;
+}
+.filter h2{
+  font-size:13px;
+  text-transform:uppercase;
+  font-weight:normal;
+}
+.filter fieldset{
+  border:none;
+  border-bottom:1px solid #e5e5e5;
+}
+.filter fieldset:last-of-type{
+  border:none;
+}
+.filter ul{
+  list-style:none;
+  margin:0;
+  padding-left:0;
+}
+.filter legend{
+  text-transform: uppercase;
+  font-size:17px;
+  font-weight:bold;
+
+}
+.filter label{
+  font-size:15px;
+  text-transform: uppercase;
+}
+.filter input[type="checkbox"],
+.filter input[type="radio"]{
+  display:none;
+}
+.checkbox+label::before{
+  margin-right:8px;
+  content:url(../img/icons/styles/checkbox-off.svg);
+}
+.checkbox:checked+label::before{
+  content:url(../img/icons/styles/checkbox-on.svg);
+}
+.radio+label::before{
+  margin-right:8px;
+  content:url(../img/icons/styles/radio-off.svg);
+}
+.radio:checked+label::before{
+  content:url(../img/icons/styles/radio-on.svg);
+}
+.filter button{
+  font-size:13px;
+  text-transform:uppercase;
+  background-color: #fff;
+  border: solid 1px #e5e5e5;
+}
+.sorting-block{
+  background-color: #f7f3ec;
+}
+.sorting-block h3{
+  text-transform: uppercase;
+  font-size:13px;
+  font-weight: normal;
+}
+.sorting-block ul{
+  list-style:none;
+}
+.sorting-block a{
+  font-size:13px;
+  color:#b2b2b2;
+  border-bottom:1px dotted #ee3643;
+  text-transform: uppercase;
+}
+.sorting-block a:hover{
+  color:#000;
+  border-bottom:1px solid #ee3643;
+}
+.sorting-block a:active{
+  border:none;
+  color:#ee3643
+}
+.sorting li{
+  display: inline;
+}
+
+/* опять же как это раскрашивать тайна для меня */
+.sorting li:nth-last-child(1)::before{
+  content: url(../img/icons/icon-down-dir.svg);
+}
+.sorting li:nth-last-child(2)::before{
+  content: url(../img/icons/icon-up-dir.svg);
+}
+.item{
+  border:1px solid #e5e5e5;
+}
+.item-title{
+  font-weight:bold;
+  font-size:18px;
+  line-height:20px;
+}
+.item-old-price{
+  font-size:17px;
+  text-decoration:line-through;
+  color:#999;
+}
+.item-buy-button{
+  background-color:#ee3643;
+}
+.item-buy-button::after{
+  content:"";
+  width:0;
+  height:0;
+  border:5px solid transparent;
+  border-left:5px solid #ee3643;
+  border-right-width: 0;
+
+}
+.pages a{
+  font-size:13px;
+  border:1px solid #e5e5e5;
+  text-transform: uppercase;
+}
+.pages a:hover{
+  border-color:#bdc6ca;
+}
+.pages a:active{
+  border-color:#ee3643;
+}
+.current{
+  background-color:#ee3643;
+}
+.about h2{
+  text-transform: uppercase;
+  font-size:30px;
+}
+.about p{
+  font-size:13px;
+}
+
