@@ -9,7 +9,20 @@ body{
 a{
   text-decoration:none;
 }
-
+.button{
+  color:#fff;
+  font-size:14px;
+  line-height:18px;
+  background-color:#ee3643;
+  text-align: center;
+  vertical-align: middle;
+}
+.button:hover{
+  background-color: #ca2c37;
+}
+.button:active{
+  background-colot:#ba2c37;
+}
 .visually-hidden {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -176,12 +189,6 @@ a{
 .header-bottom-nav a:active{
   color:#777d88;
   background-color:#1d2739;
-}
-.button{
-  color:#fff;
-  font-size:14px;
-  line-height:18px;
-  background-color:#ee3643;
 }
 .info p,
 .contacts p{
