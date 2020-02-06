@@ -13,41 +13,41 @@
   <body>
     <header>
       <div class="header-top">
-        <div class="logo">
-          <a href="index.html"><img src="./img/logo/logo-technomart.svg" alt="На главную сайта Техномарт"></a>
+        <div class="header-top-logo">
+          <a href="index.html"><img src="./img/logo/logo-technomart.svg" width="109" height="19" alt="На главную сайта Техномарт"></a>
         </div>
-        <div class="search">
+        <div class="header-top-search">
           <form method="post">
-            <input type="search" id="site-search" name="site-search" placeholder="Поиск" aria-describedby="search-placeholder">
-            <p  id="search-placeholder" class="visually-hidden">Поиск</p>
             <button type="submit" aria-label="Кнопка поиска"></button>
+            <input type="search" id="site-search" name="site-search" placeholder="Поиск:" aria-describedby="search-placeholder">
+            <p  id="search-placeholder" class="visually-hidden">Поиск:</p>
           </form>              <!--поиск-->
         </div>
-        <a class="marks" href="" aria-label="Ссылка на страницу с закладками">
+        <a class="header-top-marks" href="" aria-label="Ссылка на страницу с закладками">
           Закладки:<span class="js-num">0</span>
         </a>
-        <a class="basket" href="" aria-label="Ссылка на страницу корзины">
+        <a class="header-top-basket" href="" aria-label="Ссылка на страницу корзины">
           Корзина:<span class="js-num">0</span>
         </a>
-        <a class="ordering" href="" aria-label="Ссылка на страницу оформления заказа">
+        <a class="header-top-ordering" href="" aria-label="Ссылка на страницу оформления заказа">
           Оформить заказ
         </a>
       </div>
       <div class="header-bottom">
-        <div class="title">
+        <div class="header-bottom-title">
           <h1>
             Интернет-магазин
             строительных материалов
             и инструментов для ремонта
           </h1>
         </div>
-        <div class="data">
+        <div class="header-bottom-data">
           <p>
             <a href="tel:+7(812)555-05-55" aria-label="Ссылка на наш контактный телефон">+7(812)555-05-55</a>
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </p>
       </div>
-        <div class="user-block">
+        <div class="header-bottom-user">
         <div>  <!--оберну в див чтобы поотом просто добавлять класс hidden и удалять у залогиненого юзера-->
          <a class="login-button" href="" aria-label="Кнопка войти">
            Войти
@@ -57,7 +57,7 @@
           </a>
         </div>
         </div>
-        <nav class="main-nav">              <!--меню навигации-->
+        <nav class="header-bottom-nav">              <!--меню навигации-->
           <ul>
             <li>
               <a aria-label="Вы на главной">
@@ -103,15 +103,15 @@
         <h2 class="visually-hidden">Категории</h2>
         <div class="category new">
           <h3>Материалы</h3>
-          <a class="button"  aria-label="Ссылка на категорию с материалами">На любой вкус</a>
+          <a class="category-button"  aria-label="Ссылка на категорию с материалами">На любой вкус</a>
         </div>
         <div class="category">
           <h3>Инструмент</h3>
-          <a class="button" aria-label="Ссылка на категорию с инструментами">На все случаи</a>
+          <a class="category-button" aria-label="Ссылка на категорию с инструментами">На все случаи</a>
         </div>
         <div class="category">
           <h3>Техника</h3>
-          <a class="button" aria-label="Ссылка на технику для стройки">Для стройки</a>
+          <a class="category-button" aria-label="Ссылка на технику для стройки">Для стройки</a>
         </div>
         <div class="slider">
           <input type="radio" id="button-1" name="toogle-slider" checked>
@@ -120,11 +120,13 @@
             <label for="button-1"></label>
             <label for="button-2"></label>
           </div>
-          <button type="button" class="arrow-left"  aria-label="Кнопка переключения слайдера влево">влево</button>
-          <button type="button" class="arrow-right" aria-label="Кнопка переключения слайдера вправо">вправо</button>
+          <div class="arrow">
+          <button type="button" class="left"  aria-label="Кнопка переключения слайдера влево">влево</button>
+          <button type="button" class="right" aria-label="Кнопка переключения слайдера вправо">вправо</button>
+          </div>
           <div class="slides">
             <div class="slide">
-              <div class="text">
+              <div class="slide-text">
                 <h3>
                   Перфораторы
                 </h3>
@@ -133,7 +135,7 @@
               </div>
             </div>
               <div class="slide">
-                <div class="text">
+                <div class="slide-text">
                   <h3>
                     Дрели
                   </h3>
@@ -145,10 +147,10 @@
         </div>
         <div class="category">
           <h3>Скидки</h3>
-          <a class="button" aria-label="Ссылка на категорию со скидками">На 350 товаров</a>
+          <a class="category-button" aria-label="Ссылка на категорию со скидками">На 350 товаров</a>
         <div class="category">
           <h3>Доставка</h3>
-          <a class="button" aria-label="Ссылка на категорию с товарами для который имеется бесплатная доставка">Бесплатно</a>
+          <a class="category-button" aria-label="Ссылка на категорию с товарами для который имеется бесплатная доставка">Бесплатно</a>
         </div>
       </div>
       </section>
@@ -159,43 +161,51 @@
         </div>
         <div class="populars-list">
           <div class="item">
+          <a class="item-buy" aria-label="Кнопка добавить товар в корзину" aria-haspopup="true">Купить</a>
+          <a class="item-bookmark" aria-label="Кнопка добавить товар в закладки" aria-haspopup="true">В закладки</a>
             <div class="item-image">
               <img src="./img/products/Perforator9000.jpg" width="218" height="170" alt="Товар перфоратор Bosh 9000">
             </div>
             <div class="item-desc">
-              <span class="title">Перфоратор BOSCH BFG 9000</span>
-              <span class="old-price">32500 Р.</span>
+              <span class="item-title">Перфоратор BOSCH BFG 9000</span>
+              <span class="item-old-price">32500 Р.</span>
             </div>
-            <a class="buy" aria-label="Кнопка добавить в корзину" aria-haspopup="true">25500 Р.</a>
+            <a class="item-buy-button" aria-label="Кнопка добавить в корзину" aria-haspopup="true">25500 Р.</a>
         </div>
         <div class="item">
+          <a class="item-buy" aria-label="Кнопка добавить товар в корзину" aria-haspopup="true">Купить</a>
+          <a class="item-bookmark" aria-label="Кнопка добавить товар в закладки" aria-haspopup="true">В закладки</a>
           <div class="item-image">
             <img src="./img/products/Perforator3000.jpg" width="218" height="170" alt="Товар перфоратор Bosh 3000">
           </div>
           <div class="item-desc">
-            <span class="title">Перфоратор BOSCH BFG 3000</span>
-            <span class="old-price">22500 Р.</span>
+            <span class="item-title">Перфоратор BOSCH BFG 3000</span>
+            <span class="item-old-price">22500 Р.</span>
           </div>
-          <a class="buy" aria-label="Кнопка добавить в корзину" aria-haspopup="true">15500 Р.</a>
+          <a class="item-buy-button" aria-label="Кнопка добавить в корзину" aria-haspopup="true">15500 Р.</a>
         </div>
         <div class="item">
+          <a class="item-buy" aria-label="Кнопка добавить товар в корзину" aria-haspopup="true">Купить</a>
+          <a class="item-bookmark" aria-label="Кнопка добавить товар в закладки" aria-haspopup="true">В закладки</a>
           <div class="item-image">
             <img src="./img/products/Perforator6000.jpg" width="218" height="170" alt="Товар перфоратор Bosh 6000">
           </div>
           <div class="item-desc">
-            <span class="title">Перфоратор BOSCH BFG 6000</span>
-            <span class="old-price">30500 Р.</span>
+            <span class="item-title">Перфоратор BOSCH BFG 6000</span>
+            <span class="item-old-price">30500 Р.</span>
           </div>
-          <a class="buy" aria-label="Кнопка добавить в корзину" aria-haspopup="true">25500 Р.</a>
+          <a class="item-buy-button" aria-label="Кнопка добавить в корзину" aria-haspopup="true">25500 Р.</a>
         </div>
         <div class="item new">
+          <a class="item-buy" aria-label="Кнопка добавить товар в корзину" aria-haspopup="true">Купить</a>
+          <a class="item-bookmark" aria-label="Кнопка добавить товар в закладки" aria-haspopup="true">В закладки</a>
           <div class="item-image">
             <img src="./img/products/Perforator2000.jpg" width="218" height="170" alt="Товар перфоратор Bosh 2000 новый товар">
           </div>
           <div class="item-desc">
-            <span class="title">Перфоратор BOSCH BFG 2000</span>
+            <span class="item-title">Перфоратор BOSCH BFG 2000</span>
           </div>
-          <a class="buy" aria-label="Кнопка добавить в корзину" aria-haspopup="true">12500 Р.</a>
+          <a class="item-buy-button" aria-label="Кнопка добавить в корзину" aria-haspopup="true">12500 Р.</a>
         </div>
         </div>
       </section>
@@ -204,7 +214,7 @@
           <h2>Популярные производители:</h2>
           <a class="button" href="" aria-label="Сслыка на всех производителей">Все производители</a>
         </div>
-        <ul>
+        <ul class="brands-list">
           <li><a href="">
             <img src="./img/brands/bosch.png" width="126" height="37" alt="Перейти в категорию брэнда Bosh">
           </a></li>
@@ -237,26 +247,26 @@
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="servises-block">
           <div class="servises-block-left">
-          <button type="button" class="serv-button-1" name="services-toogle" aria-label="Кнопка показать информацию по доставке">Доставка</button>
-          <button type="button" class="serv-button-2" name="services-toogle" aria-label="Кнопка показать информацию по гарантии">Гарантия</button>
-          <button type="button" class="serv-button-3" name="services-toogle" aria-label="Кнопка показать информацию по кредиту">Кредит</button>
+          <button type="button" class="serv-button" aria-label="Кнопка показать информацию по доставке">Доставка</button>
+          <button type="button" class="serv-button" aria-label="Кнопка показать информацию по гарантии">Гарантия</button>
+          <button type="button" class="serv-button" aria-label="Кнопка показать информацию по кредиту">Кредит</button>
           </div>
         <div class="servises-block-right">
-          <div class="servises-delivery">
+          <div class="delivery selected">
             <h3>Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо<br>
               к вашему подъезду совершенно бесплатно!
               Ведь мы неплохо заработаем,<br>
               поднимая его на ваш этаж!</p>
           </div>
-          <div class="servises-gurantee visually-hidden">
+          <div class="gurantee">
             <h3>Гарантия</h3>
             <p>Если купленный у нас товар поломается или заискрит,<br>
               а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии.
               Мы обменяем сгоревший товар на новый.<br>
               Дом уж восстановите как-нибудь сами.</p>
           </div>
-          <div class="servises-credit visually-hidden">
+          <div class="credit">
             <h3>Кредит</h3>
             <p>Если купленный у нас товар поломается или заискрит,<br>
               а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии.
@@ -280,7 +290,7 @@
             Мы можем доставить ваш товар в самые отдаленные точки России!
             Техномарт работает со многими транспортными компаниями:
           </p>
-          <div class="feautes-comps">
+          <div class="info-features">
             <ul>
               <li>
                 Деловые линии
@@ -314,13 +324,13 @@
     </main>
     <footer>
       <div class="footer-top">          <!---->
-        <div class="left">
-         <a href="./index.html"><img src="./img/logo/logo-technomart.svg" width="220" height="68" alt="На главную сайта Техномарт"></a>
+        <div class="footer-top-left">
+         <a href="./index.html"><img src="./img/logo/logo-technomart.svg" width="138" height="23" alt="На главную сайта Техномарт"></a>
          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           <a href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a></p>
         </div>
         <div class="right">
-            <ul class="top">
+            <ul class="footer-top-right-top">
               <li>
                 <a href="" aria-label="Ссылка на страницу о компании техномарт">
                  Компания
@@ -347,7 +357,7 @@
                </a>
              </li>
             </ul>
-           <ul class="bottom">
+           <ul class="footer-top-right-bottom">
              <li>
                <a href="" aria-label="Ссылка на категорию с материалами">
                 Материалы
@@ -372,16 +382,16 @@
         </div>
       </div>
       <div class="footer-bottom">
-         <p class="copyright">
+         <p class="footer-bottom-copyright">
            © 2010-2016 Компания «Техномарт»
            Все права защищены
          </p>
-         <ul class="socials">
+         <ul class="footer-bottom-socials">
            <li><a class="social-button-vk" href="" aria-label="Ссылка на нашу группу во ВКонтакте">vk</a></li>
            <li><a class="social-button-fb" href="" aria-label="Ссылка на нашу страницу в Фейсбуке">fb</a></li>
            <li><a class="social-button-inst" href="" aria-label="Ссылка на нашу страницу в Инстаграмме">inst</a></li>
          </ul>
-       <div class="comm">
+       <div class="footer-bottom-communication">
          <div class="feedback">
            <p>
              Обратная связь:
@@ -390,7 +400,7 @@
              Разработано —
            </p>
          </div>
-         <div class="links">
+         <div class="footer-bottom-links">
            <a href="" aria-label="Почта разработчика сайта">
              mail@htmlacademy.ru
            </a>
