@@ -414,8 +414,8 @@ a{
 .item{
   border:1px solid #e5e5e5;
 }
-.item-title{
-  font-weight:bold;
+.item h3{
+
   font-size:18px;
   line-height:20px;
 }
@@ -424,10 +424,12 @@ a{
   text-decoration:line-through;
   color:#999;
 }
-.item-buy-button{
+.item-price{
+  font-weight:bold;
+  color:#fff;
   background-color:#ee3643;
 }
-.item-buy-button::after{
+.item-price::after{
   content:"";
   width:0;
   height:0;
