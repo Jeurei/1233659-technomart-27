@@ -93,7 +93,7 @@
       </div>
       <div class="header-bottom">
         <div class="header-title-block">
-          <h1 class="header-title">
+          <h1 class="title header-title">
             Интернет-магазин строительных материалов и инструментов для ремонта
           </h1>
         </div>
@@ -201,80 +201,51 @@
     <main>
       <section class="categories">
         <h2 class="visually-hidden">Категории</h2>
-        <div class="category new">
-          <h3 class="category-title">Материалы</h3>
+        <div class="category category-materials new">
+          <h3 class="title category-title">Материалы</h3>
           <a
             class="category-link category-button"
             aria-label="Ссылка на категорию с материалами"
             >На любой вкус</a
           >
         </div>
-        <div class="category">
-          <h3 class="category-title">Инструмент</h3>
+        <div class="category category-instruments">
+          <h3 class="title category-title">Инструмент</h3>
           <a
             class="category-link category-button"
             aria-label="Ссылка на категорию с инструментами"
             >На все случаи</a
           >
         </div>
-        <div class="category">
-          <h3 class="category-title">Техника</h3>
+        <div class="category category-technic">
+          <h3 class="title category-title">Техника</h3>
           <a class="category-button" aria-label="Ссылка на технику для стройки"
             >Для стройки</a
           >
         </div>
         <div class="slider">
-          <input
-            type="radio"
-            id="button-1"
-            class="slider-radio-input"
-            name="toogle-slider"
-            checked
-          />
-          <input
-            type="radio"
-            id="button-2"
-            class="slider-radio-input"
-            name="toogle-slider"
-          />
           <div class="slider-control">
-            <label for="button-1" class="slider-radio-input-label"></label>
-            <label for="button-2" class="slider-radio-input-label"></label>
+          <button type="button" name="slider-radio" class="slider-radio-button slider-radio-button-slected" id="slider-radio-button-1"></button>
+          <button type="button" name="slider-radio" class="slider-radio-button" id="slider-radio-button-2"></button>
           </div>
           <div class="slider-arrows">
             <button
               type="button"
-              class="slider-arrow-left"
+              class="arrow slider-arrow-left"
               aria-label="Кнопка переключения слайдера влево"
             >
-              влево
             </button>
             <button
               type="button"
-              class="slider-arrow-right"
+              class="arrow slider-arrow-right"
               aria-label="Кнопка переключения слайдера вправо"
             >
-              вправо
             </button>
           </div>
           <div class="slides">
-            <div class="slide">
+            <div class="slide-1">
               <div class="slide-text-block">
-                <h3 class="slide-text-title">
-                  Перфораторы
-                </h3>
-                <p class="slide-text">Настоящие мужские игрушки</p>
-              </div>
-              <a
-                class="button slide-button"
-                href="./catalog.html"
-                aria-label="Ссылка на страницу каталога"
-                >Открыть каталог</a
-              >"
-            </div>
-            <div class="slide">
-              <div class="slide-text-block">
-                <h3 class="slide-text-title">
+                <h3 class="title slide-text-title">
                   Дрели
                 </h3>
                 <p class="slide-text">Соседям на радость!</p>
@@ -286,17 +257,32 @@
                 >Открыть каталог</a
               >"
             </div>
+            <div class="slide-2 visually-hidden">
+              <div class="slide-text-block">
+                <h3 class="title slide-text-title">
+                  Перфораторы
+                </h3>
+                <p class="slide-text">Настоящие мужские игрушки</p>
+              </div>
+              <a
+                class="button slide-button"
+                href="./catalog.html"
+                aria-label="Ссылка на страницу каталога"
+                >Открыть каталог</a
+              >"
+            </div>
           </div>
         </div>
-        <div class="category">
-          <h3 class="category-title">Скидки</h3>
+        <div class="category category-discounts">
+          <h3 class="title category-title">Скидки</h3>
           <a
             class="category-button"
             aria-label="Ссылка на категорию со скидками"
             >На 350 товаров</a
           >
-          <div class="category">
-            <h3 class="category-title">Доставка</h3>
+        </div>
+          <div class="category category-delivery">
+            <h3 class="title category-title">Доставка</h3>
             <a
               class="category-button"
               aria-label="Ссылка на категорию с товарами для который имеется бесплатная доставка"
@@ -307,7 +293,7 @@
       </section>
       <section class="populars">
         <div class="title-block">
-          <h2 class="title-block-text">Популярные товары:</h2>
+          <h2 class="title title-block-text">Популярные товары:</h2>
           <a
             class="button populars-button"
             href=""
@@ -518,7 +504,7 @@
           </li>
         </ul>
       </section>
-      <section class="services">
+      <section class="servises">
         <h2 class="servises-title">Сервисы</h2>
         <p class="servises-text">
           Хороший интернет-магазин отличается от плохого не только ценами! Мы
@@ -526,31 +512,38 @@
         </p>
         <div class="servises-block">
           <div class="servises-block-left">
-            <button
+            <ul class="servises-list">
+            <li class="servises-list-item"><button
               type="button"
-              class="servises-button"
+              class="button servises-button servises-button-selected"
               aria-label="Кнопка показать информацию по доставке"
+              id="1"
             >
               Доставка
             </button>
-            <button
+          </li>
+            <li class="servises-list-item"><button
               type="button"
-              class="servises-button"
+              class="button servises-button"
               aria-label="Кнопка показать информацию по гарантии"
+              id="2"
             >
               Гарантия
             </button>
-            <button
+          </li>
+            <li class="servises-list-item"><button
               type="button"
-              class="servises-button"
+              class="button servises-button"
               aria-label="Кнопка показать информацию по кредиту"
+              id="3"
             >
               Кредит
-            </button>
+            </button></li>
+            </ul>
           </div>
           <div class="servises-block-right">
-            <div class="servises-block-right-delivery selected">
-              <h3 class="servises-block-right-title">Доставка</h3>
+            <div class="servises-block-right-delivery">
+              <h3 class="title servises-block-right-title">Доставка</h3>
               <p class="servises-block-right-text">
                 Мы с удовольствием доставим ваш товар прямо<br />
                 к вашему подъезду совершенно бесплатно! Ведь мы неплохо
@@ -558,7 +551,7 @@
                 поднимая его на ваш этаж!
               </p>
             </div>
-            <div class="servises-block-right-gurantee">
+            <div class="servises-block-right-gurantee visually-hidden">
               <h3 class="servises-block-right-title">Гарантия</h3>
               <p class="servises-block-right-text">
                 Если купленный у нас товар поломается или заискрит,<br />
@@ -568,7 +561,7 @@
                 Дом уж восстановите как-нибудь сами.
               </p>
             </div>
-            <div class="servises-block-right-credit">
+            <div class="servises-block-right-credit visually-hidden">
               <h3 class="servises-block-right-title">Кредит</h3>
               <p class="servises-block-right-text">
                 Если купленный у нас товар поломается или заискрит,<br />

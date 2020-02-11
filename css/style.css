@@ -11,9 +11,9 @@ a {
   text-decoration: none;
 }
 .button {
-  font: inherit;
   font-size: 14px;
   line-height: 18px;
+  font-family: "Cuprum", Arial, sans-serif;
   vertical-align: middle;
   text-align: center;
   color: #ffffff;
@@ -39,6 +39,9 @@ a {
   clip: rect(1px, 1px, 1px, 1px);
 }
 .header {
+  font-family: "Cuprum", Arial, sans-serif;
+}
+.title {
   font-family: "Cuprum", Arial, sans-serif;
 }
 .footer {
@@ -71,9 +74,10 @@ a {
   background-color: #ffffff;
 }
 .header-search-button {
-  font-family: inherit;
   width: 17px;
   height: 17px;
+
+  font-family: inherit;
 
   background-color: transparent;
   border: none;
@@ -176,10 +180,10 @@ a {
   font-size: 13px;
 }
 .about-title {
-  font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
+  font-family: "Cuprum", Arial, sans-serif;
   text-transform: uppercase;
 }
 .features-list {
@@ -325,14 +329,18 @@ a {
   font-size: 13px;
   color: #000000;
 }
-.catalog-title-block {
+.title-block {
+  font-size: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+
   background-color: #f2f6f8;
 }
 .catalog-title {
-  font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
+  font-family: "Cuprum", Arial, sans-serif;
   color: #32425c;
   text-transform: uppercase;
 }
@@ -427,6 +435,7 @@ a {
   display: flex;
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 .sorting-to-top,
@@ -450,15 +459,18 @@ a {
 }
 .item-price {
   position: relative;
+
   font-weight: bold;
   font-size: 17px;
-  color: #ffffff;
   text-align: center;
+  color: #ffffff;
+
   background-color: #ee3643;
 }
 .item-price::after {
   content: "";
   position: absolute;
+
   width: 0;
   height: 0;
 
@@ -487,6 +499,167 @@ a {
   text-transform: uppercase;
 }
 .about-text {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 13px;
 }
+.categories {
+  color: #ffffff;
+}
+.category-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+.category-materials {
+  background-color: #ffbf47;
+  background-image: url(../img/icons/categories/icon-1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.category-instruments {
+  background-color: #3bbce3;
+  background-image: url(../img/icons/categories/icon-2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.category-technic {
+  background-color: #dc91d8;
+  background-image: url(../img/icons/categories/icon-3.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.category-discounts {
+  background-color: #8ed78f;
+  background-image: url(../img/icons/categories/icon-4.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.category-delivery {
+  background-color: #ffc047;
+  background-image: url(../img/icons/categories/icon-5.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.category-button {
+  font-size: 14px;
+  font-family: "Cuprum", Arial, Helvetica, sans-serif;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.slides {
+  font-family: "Cuprum", Arial, Helvetica, sans-serif;
+}
+.slide-text-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+.slide-text {
+  font-size: 18px;
+}
+/* Они не выглядят круглыми что делать?  */
+.slider-radio-button {
+  width: 10px;
+  height: 10px;
+
+  background-color: transparent;
+  border-radius: 50%;
+}
+/* и цвет не меняют если нажать,кст его наверное можно тоже под toggle сделать */
+.slider-button-selected {
+  background-color: #ee3643;
+}
+/* В общем,нашёл кучу материала как оформить красиво,но мне кажется по тз это не требуется,поэтому пришла идея в js c помощью .toggle менять класса .visually-hidden у слайдера,а со стрелочками делать проверку например,остаются вопросы только про button-ы */
+.slide-1 {
+  width: 620px;
+  height: 288px;
+
+  background-image: url(../img/decor/Layer99.jpg);
+  background-repeat: no-repeat;
+}
+.slide-2 {
+  width: 620px;
+  height: 288px;
+
+  background-image: url(../img/decor/Layer991.jpg);
+  background-repeat: no-repeat;
+}
+.arrow {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid #000000;
+  border-right: 2px solid #000000;
+}
+.slider-arrow-right {
+  transform: rotate(45deg);
+}
+.slider-arrow-left {
+  transform: rotate(-135deg);
+}
+.brands-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+.brands-list-link {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+.brands-list-link:hover {
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+.brands-list-link:active {
+  box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
+  opacity: 0.3;
+}
+.servises {
+  background-color: #f4f7f9;
+}
+.servises-button {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+
+  background-color: #32425c;
+  border: none;
+}
+/* как сделать тень? */
+.servises-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+.servises-button {
+  width: 240px;
+  height: 60px;
+}
+.servises-button:hover {
+  background-color: #293449;
+}
+.servises-button-selected {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+.servises-block-right-title {
+  font-size: 36px;
+  line-height: 36px;
+}
+.servises-block-right-delivery {
+  background-image: url(../img/decor/Layer131.png);
+  background-repeat: no-repeat;
+}
+.servises-block-right-cgurantee {
+  background-image: url(../img/decor/Layer130.png);
+  background-repeat: no-repeat;
+}
+.servises-block-right-credit {
+  background-image: url(../img/decor/Layer119.png);
+  background-repeat: no-repeat;
+}
+/* не знаю как сверстать */
