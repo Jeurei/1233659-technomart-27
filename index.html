@@ -17,8 +17,11 @@
     ></script>
   </head>
   <body>
+    <h1 class="visually-hidden">Магазин Техномарт</h1>
     <header class="header">
       <div class="header-top">
+        <div class="header-wrapper">
+          <div class="header-wrapper-container">
         <div class="header-logo">
           <a href="index.html" class="header-logo-link"
             ><img
@@ -30,6 +33,7 @@
         </div>
         <div class="header-search">
           <form class="search-form" method="post">
+          </label>
             <button
               type="submit"
               class="header-search-button"
@@ -50,7 +54,7 @@
               class="header-search-input"
               placeholder="Поиск:"
               aria-describedby="search-placeholder"
-            />
+            /></label>
             <p id="search-placeholder" class="visually-hidden">Поиск:</p>
           </form>
           <!--поиск-->
@@ -91,11 +95,15 @@
           Оформить заказ
         </a>
       </div>
+        </div>
+      </div>
       <div class="header-bottom">
+        <div class="header-wrapper">
+          <div class="header-wrapper-container">
         <div class="header-title-block">
-          <h1 class="title header-title">
+          <p class="title header-title">
             Интернет-магазин строительных материалов и инструментов для ремонта
-          </h1>
+          </p>
         </div>
         <div class="header-data-block">
           <p class="header-data">
@@ -197,6 +205,8 @@
           </ul>
         </nav>
       </div>
+    </div>
+      </div>
     </header>
     <main>
       <section class="categories">
@@ -243,7 +253,7 @@
             </button>
           </div>
           <div class="slides">
-            <div class="slide-1">
+            <div class="slide slide-1">
               <div class="slide-text-block">
                 <h3 class="title slide-text-title">
                   Дрели
@@ -257,7 +267,7 @@
                 >Открыть каталог</a
               >"
             </div>
-            <div class="slide-2 visually-hidden">
+            <div class="slide slide-2 visually-hidden">
               <div class="slide-text-block">
                 <h3 class="title slide-text-title">
                   Перфораторы
@@ -504,56 +514,56 @@
           </li>
         </ul>
       </section>
-      <section class="servises">
-        <h2 class="servises-title">Сервисы</h2>
-        <p class="servises-text">
+      <section class="services">
+        <h2 class="services-title">Сервисы</h2>
+        <p class="services-text">
           Хороший интернет-магазин отличается от плохого не только ценами! Мы
           стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
-        <div class="servises-block">
-          <div class="servises-block-left">
-            <ul class="servises-list">
-            <li class="servises-list-item"><button
+        <div class="services-block">
+          <div class="services-block-left">
+            <ul class="services-list">
+            <li class="services-list-item"><button
               type="button"
-              class="button servises-button servises-button-selected"
+              class="button services-button services-button-selected"
               aria-label="Кнопка показать информацию по доставке"
-              id="1"
+              data-service-id="1"
             >
               Доставка
             </button>
           </li>
-            <li class="servises-list-item"><button
+            <li class="services-list-item"><button
               type="button"
-              class="button servises-button"
+              class="button services-button"
               aria-label="Кнопка показать информацию по гарантии"
-              id="2"
+              data-service-id="2"
             >
               Гарантия
             </button>
           </li>
-            <li class="servises-list-item"><button
+            <li class="services-list-item"><button
               type="button"
-              class="button servises-button"
+              class="button services-button"
               aria-label="Кнопка показать информацию по кредиту"
-              id="3"
+              data-service-id="3"
             >
               Кредит
             </button></li>
             </ul>
           </div>
-          <div class="servises-block-right">
-            <div class="servises-block-right-delivery">
-              <h3 class="title servises-block-right-title">Доставка</h3>
-              <p class="servises-block-right-text">
+          <div class="services-block-right">
+            <div class="service services-block-right-delivery service-block-right-selected">
+              <h3 class="title services-block-right-title">Доставка</h3>
+              <p class="services-block-right-text">
                 Мы с удовольствием доставим ваш товар прямо<br />
                 к вашему подъезду совершенно бесплатно! Ведь мы неплохо
                 заработаем,<br />
                 поднимая его на ваш этаж!
               </p>
             </div>
-            <div class="servises-block-right-gurantee visually-hidden">
-              <h3 class="servises-block-right-title">Гарантия</h3>
-              <p class="servises-block-right-text">
+            <div class="service services-block-right-gurantee">
+              <h3 class="services-block-right-title">Гарантия</h3>
+              <p class="services-block-right-text">
                 Если купленный у нас товар поломается или заискрит,<br />
                 а также в случае пожара, спровоцированного его возгоранием, вы
                 всегда можете быть уверены в нашей гарантии. Мы обменяем
@@ -561,9 +571,9 @@
                 Дом уж восстановите как-нибудь сами.
               </p>
             </div>
-            <div class="servises-block-right-credit visually-hidden">
-              <h3 class="servises-block-right-title">Кредит</h3>
-              <p class="servises-block-right-text">
+            <div class="service services-block-right-credit">
+              <h3 class="services-block-right-title">Кредит</h3>
+              <p class="services-block-right-text">
                 Если купленный у нас товар поломается или заискрит,<br />
                 а также в случае пожара, спровоцированного его возгоранием, вы
                 всегда можете быть уверены в нашей гарантии. Мы обменяем
@@ -571,7 +581,7 @@
                 Дом уж восстановите как-нибудь сами.
               </p>
               <a
-                class="button servises-credit-button"
+                class="button services-credit-button"
                 href=""
                 aria-label="Кнопка отправить заявку"
                 >Отправить заявку</a

@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-
+  min-width: 1200px;
+  min-height: 320px;
   font-size: 13px;
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
@@ -40,6 +41,8 @@ a {
 }
 .header {
   font-family: "Cuprum", Arial, sans-serif;
+  margin-bottom: 59px;
+  min-height: 320px;
 }
 .title {
   font-family: "Cuprum", Arial, sans-serif;
@@ -49,16 +52,39 @@ a {
 }
 .header-top {
   font-size: 17px;
-
+  min-width: 1200px;
+  min-height: 42px;
   background-color: #293449;
 }
-.header-search-input {
+.header-wrapper {
+  width: 100%;
+  margin: 0;
+}
+.header-wrapper-container {
+  display: flex;
+  width: 940px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+.search-form {
   position: relative;
-
+}
+.header-search-input {
+  min-height: 45px;
   font: inherit;
-
+  width: 285px;
+  padding-left: 39px;
+  vertical-align: middle;
   background-color: #293449;
   border: none;
+}
+.header-search-button {
+  display: inline-block;
+  position: absolute;
+  top: 13px;
+  left: 5px;
 }
 .header-search-input:hover {
   background-color: #212a3a;
@@ -82,7 +108,13 @@ a {
   background-color: transparent;
   border: none;
 }
+/* Мне кажется что решение с паддингами тут неверное,как по другом вертикально текст отцентрировать? Здесь и в header logo   */
 .header-link {
+  display: inline-block;
+  text-align: center;
+  padding-top: 15px;
+  width: 175px;
+  min-height: 30px;
   color: #ffffff;
 }
 .header-link:active {
@@ -100,9 +132,14 @@ a {
   background-color: rgba(95, 187, 45, 0.8);
 }
 .header-logo {
+  text-align: center;
+  width: 220px;
+  padding-top: 15px;
+  height: 30px;
   background-color: rgba(238, 54, 67, 1);
   box-shadow: 0 5px 0 0 rgba(238, 54, 67, 0.8);
 }
+
 .header-logo:hover {
   background-color: rgba(238, 54, 67, 0.9);
 }
@@ -111,15 +148,21 @@ a {
 }
 .header-bottom {
   background-color: #f4f7f9;
+  min-height: 158px;
 }
 .header-title {
   font-style: italic;
   font-size: 16px;
+  text-align: left;
+  vertical-align: middle;
+  padding: 10px;
+  width: 300px;
   line-height: 23px;
   color: #ee3643;
 }
 .header-data {
   color: #32425c;
+  width: 300px;
 }
 .header-tel-link {
   font-size: 21px;
@@ -128,7 +171,9 @@ a {
 
   border: 3px solid #ffffff;
 }
-
+.header-user-bloc {
+  width: 300px;
+}
 .header-user-nav {
   margin: 0;
   padding-left: 0;
@@ -159,9 +204,11 @@ a {
   background-color: #32425c;
 }
 .header-nav-list {
+  display: flex;
+  align-items: flex-end;
   margin: 0;
   padding-left: 0;
-
+  min-height: 60px;
   list-style: none;
 }
 .header-nav-link {
@@ -565,27 +612,24 @@ a {
   background-color: transparent;
   border-radius: 50%;
 }
-/* и цвет не меняют если нажать,кст его наверное можно тоже под toggle сделать */
 .slider-button-selected {
   background-color: #ee3643;
 }
-/* В общем,нашёл кучу материала как оформить красиво,но мне кажется по тз это не требуется,поэтому пришла идея в js c помощью .toggle менять класса .visually-hidden у слайдера,а со стрелочками делать проверку например,остаются вопросы только про button-ы */
-.slide-1 {
+.slide {
   width: 620px;
   height: 288px;
-
+}
+.slide-1 {
   background-image: url(../img/decor/Layer99.jpg);
   background-repeat: no-repeat;
 }
 .slide-2 {
-  width: 620px;
-  height: 288px;
-
   background-image: url(../img/decor/Layer991.jpg);
   background-repeat: no-repeat;
 }
 .arrow {
   display: inline-block;
+  vertical-align: middle;
   width: 15px;
   height: 15px;
 
@@ -617,10 +661,11 @@ a {
   box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
   opacity: 0.3;
 }
-.servises {
+.services {
   background-color: #f4f7f9;
 }
-.servises-button {
+
+.services-button {
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
@@ -629,38 +674,44 @@ a {
   border: none;
 }
 /* как сделать тень? */
-.servises-list {
+.services-list {
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
-.servises-button {
+.services-button {
   width: 240px;
   height: 60px;
 }
-.servises-button:hover {
+.services-button:hover {
   background-color: #293449;
 }
-.servises-button-selected {
+.services-button-selected {
   color: #000000;
 
   background-color: #ffffff;
 }
-.servises-block-right-title {
+.service {
+  display: none;
+}
+.service-block-right-selected {
+  display: block;
+}
+.services-block-right-title {
   font-size: 36px;
   line-height: 36px;
 }
-.servises-block-right-delivery {
+.services-block-right-delivery {
   background-image: url(../img/decor/Layer131.png);
   background-repeat: no-repeat;
 }
-.servises-block-right-cgurantee {
+.services-block-right-cgurantee {
   background-image: url(../img/decor/Layer130.png);
   background-repeat: no-repeat;
 }
-.servises-block-right-credit {
+.services-block-right-credit {
   background-image: url(../img/decor/Layer119.png);
   background-repeat: no-repeat;
 }
-/* не знаю как сверстать */
+/* не знаю как сверстать тень у сервисов подскажите*/
