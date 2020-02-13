@@ -20,8 +20,8 @@
     <h1 class="visually-hidden">Магазин Техномарт</h1>
     <header class="header">
       <div class="header-top">
-        <div class="header-wrapper">
-          <div class="header-wrapper-container">
+        <div class="wrapper-container">
+          <div class="header-top-wrapper-container">
         <div class="header-logo">
           <a href="index.html" class="header-logo-link"
             ><img
@@ -98,8 +98,9 @@
         </div>
       </div>
       <div class="header-bottom">
-        <div class="header-wrapper">
-          <div class="header-wrapper-container">
+        <div class="wrapper-container">
+        <div class="header-bottom-wrapper-container">
+          <div class="header-bottom-wrapper-top-container">
         <div class="header-title-block">
           <p class="title header-title">
             Интернет-магазин строительных материалов и инструментов для ремонта
@@ -140,6 +141,7 @@
             Регистрация
           </a>
         </div>
+      </div>
         <nav class="header-nav">
           <!--меню навигации-->
           <ul class="header-nav-list">
@@ -211,6 +213,8 @@
     <main>
       <section class="categories">
         <h2 class="visually-hidden">Категории</h2>
+        <div class="wrapper-container">
+          <div class="categories-wrapper-container">
         <div class="category category-materials new">
           <h3 class="title category-title">Материалы</h3>
           <a
@@ -234,9 +238,35 @@
           >
         </div>
         <div class="slider">
-          <div class="slider-control">
-          <button type="button" name="slider-radio" class="slider-radio-button slider-radio-button-slected" id="slider-radio-button-1"></button>
-          <button type="button" name="slider-radio" class="slider-radio-button" id="slider-radio-button-2"></button>
+          <div class="slides">
+            <div class="slide slide-1"  data-slide-index="1">
+              <div class="slide-text-block">
+                <h3 class="title slide-text-title">
+                  Дрели
+                </h3>
+                <p class="slide-text">Соседям на радость!</p>
+              </div>
+              <a
+                class="button slide-button"
+                href="./catalog.html"
+                aria-label="Ссылка на страницу каталога"
+                >Открыть каталог</a
+              >"
+            </div>
+            <div class="slide slide-2 visually-hidden" data-slide-index="2">
+              <div class="slide-text-block">
+                <h3 class="title slide-text-title">
+                  Перфораторы
+                </h3>
+                <p class="slide-text">Настоящие мужские игрушки</p>
+              </div>
+              <a
+                class="button slide-button"
+                href="./catalog.html"
+                aria-label="Ссылка на страницу каталога"
+                >Открыть каталог</a
+              >"
+            </div>
           </div>
           <div class="slider-arrows">
             <button
@@ -252,36 +282,11 @@
             >
             </button>
           </div>
-          <div class="slides">
-            <div class="slide slide-1">
-              <div class="slide-text-block">
-                <h3 class="title slide-text-title">
-                  Дрели
-                </h3>
-                <p class="slide-text">Соседям на радость!</p>
-              </div>
-              <a
-                class="button slide-button"
-                href="./catalog.html"
-                aria-label="Ссылка на страницу каталога"
-                >Открыть каталог</a
-              >"
-            </div>
-            <div class="slide slide-2 visually-hidden">
-              <div class="slide-text-block">
-                <h3 class="title slide-text-title">
-                  Перфораторы
-                </h3>
-                <p class="slide-text">Настоящие мужские игрушки</p>
-              </div>
-              <a
-                class="button slide-button"
-                href="./catalog.html"
-                aria-label="Ссылка на страницу каталога"
-                >Открыть каталог</a
-              >"
-            </div>
-          </div>
+          <ul class="slider-pagination">
+           <li class="slider-pagintion-item"><button type="button" name="slider-radio" class="slider-radio-button slider-radio-button-slected" id="slider-radio-button-1" data-slider-count="1"></button></li>
+           <li class="slider-pagintion-item"><button type="button" name="slider-radio" class="slider-radio-button" id="slider-radio-button-2" data-slider-count="2"></button></li>
+          </ul>
+
         </div>
         <div class="category category-discounts">
           <h3 class="title category-title">Скидки</h3>
@@ -299,7 +304,9 @@
               >Бесплатно</a
             >
           </div>
+          </div>
         </div>
+      </div>
       </section>
       <section class="populars">
         <div class="title-block">

@@ -1,9 +1,8 @@
 body {
   min-width: 1200px;
-  min-height: 320px;
+  min-height: 3771px;
   margin: 0;
   padding: 0;
-
   font-size: 13px;
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
@@ -41,6 +40,8 @@ a {
   clip: rect(1px, 1px, 1px, 1px);
 }
 .header {
+  display: flex;
+  flex-direction: column;
   min-height: 320px;
   margin-bottom: 59px;
 
@@ -60,20 +61,37 @@ a {
 
   background-color: #293449;
 }
-.header-wrapper {
+.wrapper-container {
   width: 100%;
   margin: 0;
 }
-.header-wrapper-container {
+.header-top-wrapper-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 940px;
+  align-items: baseline;
+  align-content: center;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+.header-bottom-wrapper-container {
+  display: flex;
+  width: 940px;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+.header-bottom-wrapper-top-container {
+  display: flex;
+  min-height: 160px;
   margin: 0 auto;
   padding: 0 auto;
 }
 .search-form {
   position: relative;
+}
+.header-search {
+  width: 290px;
+  min-height: 45px;
 }
 .header-search-input {
   width: 285px;
@@ -119,8 +137,8 @@ a {
 .header-link {
   display: inline-block;
   width: 175px;
-  min-height: 30px;
-  padding-top: 15px;
+  padding-top: 10px;
+  min-height: 35px;
 
   text-align: center;
   color: #ffffff;
@@ -141,8 +159,8 @@ a {
 }
 .header-logo {
   width: 220px;
-  height: 30px;
-  padding-top: 15px;
+  height: 35px;
+  padding-top: 10px;
 
   text-align: center;
 
@@ -157,14 +175,15 @@ a {
   background-color: rgba(238, 54, 67, 0.8);
 }
 .header-bottom {
-  min-height: 158px;
-
+  min-height: 280px;
   background-color: #f4f7f9;
 }
-.header-title {
+.header-title-block {
+  box-sizing: border-box;
   width: 300px;
-  padding: 10px;
-
+  padding: 30px;
+}
+.header-title {
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
@@ -172,20 +191,31 @@ a {
   text-align: left;
   color: #ee3643;
 }
-.header-data {
-  width: 300px;
-
-  color: #32425c;
-}
 .header-tel-link {
+  position: relative;
+  display: block;
+  width: 270px;
+  padding: 5px 0 5px 0;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
-
   border: 3px solid #ffffff;
 }
-.header-user-bloc {
+.header-tel-icon {
+  position: absolute;
+  left: -10px;
+}
+.header-data-block {
   width: 300px;
+}
+.header-data {
+  text-align: center;
+  color: #32425c;
+}
+
+.header-user-block {
+  width: 300px;
+  align-self: center;
 }
 .header-user-nav {
   margin: 0;
@@ -194,10 +224,14 @@ a {
   list-style: none;
 }
 .header-user-link {
+  padding: 5px;
   font-size: 21px;
   color: #000000;
 
   background-color: #ffffff;
+}
+.header-user-button {
+  margin-right: 10px;
 }
 .header-user-nav-link:hover {
   color: rgba(238, 54, 67, 1);
@@ -214,18 +248,26 @@ a {
   color: rgba(50, 66, 92, 0.3);
 }
 .header-nav {
+  margin-top: auto;
+  width: 100%;
   background-color: #32425c;
+  box-shadow: inset 0px -5px 0 0 #293449;
+  min-height: 60px;
 }
 .header-nav-list {
   display: flex;
-  align-items: flex-end;
-  min-height: 60px;
   margin: 0;
+  justify-content: space-around;
   padding-left: 0;
-
   list-style: none;
 }
 .header-nav-link {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 20px;
+  height: 40px;
+  width: 130px;
   font-size: 17px;
   color: #ffffff;
 }
@@ -566,46 +608,62 @@ a {
 .categories {
   color: #ffffff;
 }
+/* Собственно да,сделал просто последовательность действий,но как решить индивидуально задачу для блока не понимаю */
+.categories-wrapper-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 940px;
+  margin: auto;
+  justify-content: space-between;
+}
 .category-title {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
 }
+.category {
+  width: 300px;
+  height: 123px;
+}
 .category-materials {
   background-color: #ffbf47;
   background-image: url(../img/icons/categories/icon-1.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 213px;
 }
 .category-instruments {
   background-color: #3bbce3;
   background-image: url(../img/icons/categories/icon-2.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 213px;
 }
 .category-technic {
   background-color: #dc91d8;
   background-image: url(../img/icons/categories/icon-3.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 213px;
 }
 .category-discounts {
   background-color: #8ed78f;
   background-image: url(../img/icons/categories/icon-4.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 213px;
 }
 .category-delivery {
   background-color: #ffc047;
   background-image: url(../img/icons/categories/icon-5.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 213px;
 }
 .category-button {
   font-size: 14px;
   font-family: "Cuprum", Helvetica, sans-serif;
 
   background-color: rgba(0, 0, 0, 0.1);
+}
+.slider {
+  height: 266px;
+  width: 620px;
 }
 .slides {
   font-family: "Cuprum", Helvetica, sans-serif;
@@ -618,7 +676,11 @@ a {
 .slide-text {
   font-size: 18px;
 }
-/* Они не выглядят круглыми что делать?  */
+.slider-pagintaion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} /* Они не выглядят круглыми что делать?  */
 .slider-radio-button {
   width: 10px;
   height: 10px;
