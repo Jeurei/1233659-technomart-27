@@ -48,8 +48,9 @@ a {
 }
 .header-wrapper {
   display: flex;
-  margin: 0 auto;
   flex-wrap: wrap;
+  margin: 0 auto;
+
   justify-items: stretch;
 }
 .header {
@@ -89,8 +90,9 @@ a {
   border: none;
 }
 .header-search-input {
-  height: 42px;
   width: 100%;
+  height: 42px;
+
   font: inherit;
 
   background-color: #293449;
@@ -132,10 +134,12 @@ a {
 }
 .header-logo {
   z-index: 1;
+
   display: flex;
   justify-content: center;
   align-items: center;
   width: 220px;
+
   background-color: rgba(238, 54, 67, 1);
   box-shadow: 0 5px 0 0 #b52933;
 }
@@ -147,27 +151,29 @@ a {
 }
 .header-logo-link {
   display: flex;
-  height: 100%;
-  width: 100%;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 .header-bottom {
-  background-color: #f4f7f9;
   padding-bottom: 60px;
+
+  background-color: #f4f7f9;
 }
 /* Как подобрать размер вот этого блока */
 .header-title-block {
   display: flex;
-  padding-left: 53px;
-  padding-top: 54px;
-  padding-bottom: 44px;
   justify-content: center;
   align-items: center;
+  padding-top: 54px;
+  padding-bottom: 44px;
+  padding-left: 53px;
 }
 
 .header-title {
   width: 200px;
+
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
@@ -176,23 +182,26 @@ a {
 .header-data {
   display: flex;
   flex-shrink: 0;
-  padding-left: 71px;
-  padding-top: 54px;
-  padding-bottom: 44px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 54px;
+  padding-bottom: 44px;
+  padding-left: 71px;
+
   color: #32425c;
 }
 .header-tel-link {
   position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 60px;
-  padding-right: 52px;
   min-width: 152px;
   min-height: 39px;
+  padding-right: 52px;
+  padding-left: 60px;
+
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
@@ -208,9 +217,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 82px;
   padding-top: 20px;
   padding-bottom: 44px;
+  padding-left: 82px;
 }
 .header-user-nav {
   margin: 0;
@@ -222,13 +231,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 25px;
   height: 45px;
+  padding: 0 25px;
 }
 .login-button {
   position: relative;
-  padding-left: 48px;
+
   margin-right: 10px;
+  padding-left: 48px;
 }
 .header-user-icon {
   position: absolute;
@@ -240,7 +250,7 @@ a {
 
   background-color: #ffffff;
 }
-.header-user-nav-link:hover {
+.header-user-link:hover {
   color: rgba(238, 54, 67, 1);
 }
 .header-user-link:active {
@@ -255,8 +265,9 @@ a {
   color: rgba(50, 66, 92, 0.3);
 }
 .header-nav {
-  background-color: #32425c;
   width: 100%;
+
+  background-color: #32425c;
 }
 .header-nav-list {
   display: flex;
@@ -264,14 +275,16 @@ a {
   align-items: center;
   margin: 0;
   padding-left: 0;
+
   list-style: none;
-  box-shadow: inset 0px -5px 0 0 #293449;
+
+  box-shadow: inset 0 -5px 0 0 #293449;
 }
 .header-nav-list-item {
   display: flex;
+  flex: 1 1 auto;
   justify-content: stretch;
   align-items: center;
-  flex: 1 1 auto;
   height: 60px;
 }
 .header-nav-link {
@@ -280,8 +293,8 @@ a {
   align-items: center;
   width: 100%;
   height: 100%;
-  font-size: 17px;
 
+  font-size: 17px;
   color: #ffffff;
 }
 .header-nav-link:hover {
