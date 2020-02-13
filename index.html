@@ -17,11 +17,11 @@
     ></script>
   </head>
   <body>
-    <h1 class="visually-hidden">Магазин Техномарт</h1>
     <header class="header">
+    <h1 class="visually-hidden">Магазин техномарт</h1>
       <div class="header-top">
-        <div class="wrapper-container">
-          <div class="header-top-wrapper-container">
+        <div class="center">
+          <div class="header-wrapper">
         <div class="header-logo">
           <a href="index.html" class="header-logo-link"
             ><img
@@ -33,20 +33,6 @@
         </div>
         <div class="header-search">
           <form class="search-form" method="post">
-          </label>
-            <button
-              type="submit"
-              class="header-search-button"
-              aria-label="Кнопка поиска"
-            >
-              <img
-                class="header-search-icon"
-                src="./img/icons/icon-search.svg"
-                alt="Иконка поиска"
-                width="17"
-                height="17"
-              />
-            </button>
             <input
               type="search"
               id="site-search"
@@ -54,7 +40,20 @@
               class="header-search-input"
               placeholder="Поиск:"
               aria-describedby="search-placeholder"
-            /></label>
+            />
+            <button
+              type="submit"
+              class="header-search-button"
+              aria-label="Кнопка поиска"
+            >
+              <img
+                class="header-icon header-search-icon"
+                src="./img/icons/icon-search.svg"
+                alt="Иконка поиска"
+                width="17"
+                height="17"
+              />
+            </button>
             <p id="search-placeholder" class="visually-hidden">Поиск:</p>
           </form>
           <!--поиск-->
@@ -65,7 +64,7 @@
           aria-label="Ссылка на страницу с закладками"
         >
           <img
-            class="header-bookmark-icon"
+            class="header-icon header-bookmark-icon"
             src="./img/icons/icon-bookmark.svg"
             alt="Иконка закладок"
             width="17"
@@ -79,7 +78,7 @@
           aria-label="Ссылка на страницу корзины"
         >
           <img
-            class="header-basket-icon"
+            class="header-icon  header-basket-icon"
             src="./img/icons/icon-cart.svg"
             alt="Иконка корзины"
             width="17"
@@ -94,13 +93,12 @@
         >
           Оформить заказ
         </a>
-      </div>
         </div>
       </div>
+    </div>
       <div class="header-bottom">
-        <div class="wrapper-container">
-        <div class="header-bottom-wrapper-container">
-          <div class="header-bottom-wrapper-top-container">
+        <div class="center">
+          <div class="header-wrapper">
         <div class="header-title-block">
           <p class="title header-title">
             Интернет-магазин строительных материалов и инструментов для ремонта
@@ -123,7 +121,7 @@
         </div>
         <div class="header-user-block">
           <a
-            class="header-user-link header-user-button"
+            class="header-user-link header-user-button login-button"
             href=""
             aria-label="Кнопка войти"
           >
@@ -140,8 +138,8 @@
           >
             Регистрация
           </a>
+
         </div>
-      </div>
         <nav class="header-nav">
           <!--меню навигации-->
           <ul class="header-nav-list">
@@ -207,14 +205,12 @@
           </ul>
         </nav>
       </div>
-    </div>
+      </div>
       </div>
     </header>
-    <main>
+    <main class="main">
       <section class="categories">
         <h2 class="visually-hidden">Категории</h2>
-        <div class="wrapper-container">
-          <div class="categories-wrapper-container">
         <div class="category category-materials new">
           <h3 class="title category-title">Материалы</h3>
           <a
@@ -239,7 +235,7 @@
         </div>
         <div class="slider">
           <div class="slides">
-            <div class="slide slide-1"  data-slide-index="1">
+            <div class="slide slide-1 selected" data-slide-id="1">
               <div class="slide-text-block">
                 <h3 class="title slide-text-title">
                   Дрели
@@ -253,7 +249,7 @@
                 >Открыть каталог</a
               >"
             </div>
-            <div class="slide slide-2 visually-hidden" data-slide-index="2">
+            <div class="slide slide-2" data-slide-id="1">
               <div class="slide-text-block">
                 <h3 class="title slide-text-title">
                   Перфораторы
@@ -268,6 +264,7 @@
               >"
             </div>
           </div>
+
           <div class="slider-arrows">
             <button
               type="button"
@@ -282,11 +279,10 @@
             >
             </button>
           </div>
-          <ul class="slider-pagination">
-           <li class="slider-pagintion-item"><button type="button" name="slider-radio" class="slider-radio-button slider-radio-button-slected" id="slider-radio-button-1" data-slider-count="1"></button></li>
-           <li class="slider-pagintion-item"><button type="button" name="slider-radio" class="slider-radio-button" id="slider-radio-button-2" data-slider-count="2"></button></li>
+          <ul class="slider-control">
+          <li><button type="button" name="slider-radio" class="slider-radio-button slider-radio-button-slected" data-slider-count="1"></button></li>
+          <li><button type="button" name="slider-radio" class="slider-radio-button" data-slider-count="2"></button></li>
           </ul>
-
         </div>
         <div class="category category-discounts">
           <h3 class="title category-title">Скидки</h3>
@@ -304,9 +300,7 @@
               >Бесплатно</a
             >
           </div>
-          </div>
         </div>
-      </div>
       </section>
       <section class="populars">
         <div class="title-block">
@@ -559,7 +553,7 @@
             </ul>
           </div>
           <div class="services-block-right">
-            <div class="service services-block-right-delivery service-block-right-selected">
+            <div class="service services-block-right-delivery service-selected">
               <h3 class="title services-block-right-title">Доставка</h3>
               <p class="services-block-right-text">
                 Мы с удовольствием доставим ваш товар прямо<br />
