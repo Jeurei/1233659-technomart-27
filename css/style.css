@@ -471,7 +471,7 @@ a {
   align-items: stretch;
 }
 .footer-adress {
-  width: 322px;
+  width: 323px;
   margin-right: 91px;
 }
 .footer-top-link {
@@ -520,6 +520,7 @@ a {
 }
 
 .social {
+  margin-right: 3px;
   display: block;
   width: 42px;
   height: 42px;
