@@ -13,209 +13,214 @@
   <body>
     <header class="header">
       <div class="header-top">
-        <div class="header-logo">
-          <a href="index.html" class="header-logo-link"
-            ><img
-              src="./img/logo/logo-technomart.svg"
-              width="109"
-              height="19"
-              alt="На главную сайта Техномарт"
-          /></a>
-        </div>
-        <div class="header-search">
-          <form class="search-form" method="post">
-            <button
-              type="submit"
-              class="header-search-button"
-              aria-label="Кнопка поиска"
+        <div class="center">
+          <div class="header-wrapper">
+            <div class="header-logo">
+              <a href="index.html" class="header-logo-link"
+                ><img
+                  src="./img/logo/logo-technomart.svg"
+                  width="109"
+                  height="19"
+                  alt="На главную сайта Техномарт"
+              /></a>
+            </div>
+            <div class="header-search">
+              <form class="search-form" method="post">
+                <button
+                  type="submit"
+                  class="header-search-button"
+                  aria-label="Кнопка поиска"
+                >
+                  <img
+                    class="header-icon header-search-icon"
+                    src="./img/icons/icon-search.svg"
+                    alt="Иконка поиска"
+                    width="17"
+                    height="17"
+                  />
+                </button>
+                <input
+                  type="search"
+                  id="site-search"
+                  name="site-search"
+                  class="header-search-input"
+                  placeholder="Поиск:"
+                  aria-describedby="search-placeholder"
+                />
+                <p id="search-placeholder" class="visually-hidden">Поиск:</p>
+              </form>
+              <!--поиск-->
+            </div>
+            <a
+              class="header-link header-bookmarks"
+              href=""
+              aria-label="Ссылка на страницу с закладками"
             >
               <img
-                class="header-search-icon"
-                src="./img/icons/icon-search.svg"
-                alt="Иконка поиска"
+                class="header-icon header-bookmark-icon"
+                src="./img/icons/icon-bookmark.svg"
+                alt="Иконка закладок"
                 width="17"
                 height="17"
               />
-            </button>
-            <input
-              type="search"
-              id="site-search"
-              name="site-search"
-              class="header-search-input"
-              placeholder="Поиск:"
-              aria-describedby="search-placeholder"
-            />
-            <p id="search-placeholder" class="visually-hidden">Поиск:</p>
-          </form>
-          <!--поиск-->
-        </div>
-        <a
-          class="header-link header-bookmarks"
-          href=""
-          aria-label="Ссылка на страницу с закладками"
-        >
-          <img
-            class="header-bookmark-icon"
-            src="./img/icons/icon-bookmark.svg"
-            alt="Иконка закладок"
-            width="17"
-            height="17"
-          />
-          Закладки:<span class="header-bookmark-js-num">0</span>
-        </a>
-        <a
-          class="header-link header-basket"
-          href=""
-          aria-label="Ссылка на страницу корзины"
-        >
-          <img
-            class="header-basket-icon full"
-            src="./img/icons/icon-cart.svg"
-            alt="Иконка корзины"
-            width="17"
-            height="17"
-          />
-          Корзина:<span class="header-basket-js-num">10</span>
-        </a>
-        <a
-          class="header-link header-ordering"
-          href=""
-          aria-label="Ссылка на страницу оформления заказа"
-        >
-          Оформить заказ
-        </a>
-      </div>
-      <div class="header-bottom">
-        <div class="header-title-block">
-          <h1 class="header-title">
-            Интернет-магазин строительных материалов и инструментов для ремонта
-          </h1>
-        </div>
-        <div class="header-data-block">
-          <p class="header-data">
+              Закладки:<span class="header-bookmark-js-num">0</span>
+            </a>
             <a
-              class="header-tel-link"
-              href="tel:+7(812)555-05-55"
-              aria-label="Ссылка на наш контактный телефон"
-              ><img
-                class="header-tel-icon"
-                src="./img/icons/icon-phone.svg"
-                alt="Иконка телефона"
-              />+7(812)555-05-55</a
+              class="header-link header-basket"
+              href=""
+              aria-label="Ссылка на страницу корзины"
             >
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-          </p>
-        </div>
-        <div class="header-user-logged">
-          <div>
-            <!--юзер-->
-            <div class="header-user">
-              <a
-                class="header-user-link header-user-name"
-                href=""
-                aria-label="Ссылка на текущего пользователя"
-                ><img
-                  class="header-user-icon"
-                  src="./img/icons/icon-user.svg"
-                  alt="Иконка пользователя"
-                />Равшан Джамшутович</a
-              >
-              <a
-                class="header-logout-button"
-                aria-label="Выйти с аккаунта текущего пользователя"
-                ><img src="./img/icons/icon-logout.svg" alt="Иконка выхода"
-              /></a>
-            </div>
-            <ul class="header-user-nav">
-              <li class="header-user-nav-item">
-                <a
-                  class="header-user-nav-link"
-                  href=""
-                  aria-label="Ссылка на страницу с заказами текущего пользователя"
-                  >Мои заказы</a
-                >
-              </li>
-              <li class="header-user-nav-item">
-                <a
-                  class="header-user-nav-link"
-                  href=""
-                  aria-label="Ссылка на страницу личного кабинета текущего пользователя"
-                  >Личный кабинет</a
-                >
-              </li>
-            </ul>
+              <img
+                class="header-icon header-basket-icon full"
+                src="./img/icons/icon-cart.svg"
+                alt="Иконка корзины"
+                width="17"
+                height="17"
+              />
+              Корзина:<span class="header-basket-js-num">10</span>
+            </a>
+            <a
+              class="header-link header-ordering"
+              href=""
+              aria-label="Ссылка на страницу оформления заказа"
+            >
+              Оформить заказ
+            </a>
           </div>
         </div>
-        <nav class="header-nav">
-          <!--меню навигации-->
-          <ul class="header-nav-list">
-            <li class="header-nav-item">
-              <a
-                class="header-nav-link"
-                href="./index.html"
-                aria-label="На главную"
-              >
-                Главная
-              </a>
-            </li>
-            <li class="header-nav-item">
-              <a
-                class="header-nav-link"
-                href=""
-                aria-label="Ссылка на страницу с описанием компании техномарт"
-              >
-                Компания
-              </a>
-            </li>
-            <li class="header-nav-item">
-              <a
-                class="header-nav-link"
-                aria-label="Вы на странице каталога магазина техномарт"
-              >
-                Каталог
-              </a>
-            </li>
-            <li class="header-nav-item">
-              <a
-                class="header-nav-link"
-                href=""
-                aria-label="Ссылка на новости компании техномарт"
-              >
-                Новости
-              </a>
-            </li>
-            <li class="header-nav-item">
-              <a
-                class="header-nav-link"
-                href=""
-                aria-label="Ссылка на страницу со специпредложениями"
-              >
-                Спецпредложения
-              </a>
-            </li>
-            <li class="header-nav-item">
-              <a
-                class="header-nav-link"
-                href=""
-                aria-label="Ссылка на страницу с информацией по доставке"
-              >
-                Доставка
-              </a>
-            </li>
-            <li class="header-nav-item">
-              <a
-                class="header-nav-link"
-                href=""
-                aria-label="Ссылка на страницу с контактами"
-              >
-                Контакты
-              </a>
-            </li>
-          </ul>
-        </nav>
+      </div>
+      <div class="header-bottom">
+        <div class="center">
+          <div class="header-wrapper">
+            <div class="header-title-block">
+              <h1 class="header-title">
+                Интернет-магазин строительных материалов и инструментов для
+                ремонта
+              </h1>
+            </div>
+            <div class="header-data-block">
+              <p class="header-data">
+                <a
+                  class="header-tel-link"
+                  href="tel:+7(812)555-05-55"
+                  aria-label="Ссылка на наш контактный телефон"
+                  ><img
+                    class="header-tel-icon"
+                    src="./img/icons/icon-phone.svg"
+                    alt="Иконка телефона"
+                  />+7(812)555-05-55</a
+                >
+                г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+              </p>
+            </div>
+            <div class="header-user-block-logged">
+                <!--юзер-->
+                <div class="header-user">
+                  <a
+                    class="header-user-link header-user-name"
+                    href=""
+                    aria-label="Ссылка на текущего пользователя"
+                    ><img
+                      class="header-user-icon"
+                      src="./img/icons/icon-user.svg"
+                      alt="Иконка пользователя"
+                    />Равшан Джамшутович</a
+                  >
+                  <a
+                    class="header-logout-button"
+                    aria-label="Выйти с аккаунта текущего пользователя"
+                    ><img src="./img/icons/icon-logout.svg" alt="Иконка выхода"
+                  /></a>
+                </div>
+                <ul class="header-user-nav">
+                  <li class="header-user-nav-item">
+                    <a
+                      class="header-user-nav-link"
+                      href=""
+                      aria-label="Ссылка на страницу с заказами текущего пользователя"
+                      >Мои заказы</a
+                    >
+                  </li>
+                  <li class="header-user-nav-item">
+                    <a
+                      class="header-user-nav-link"
+                      href=""
+                      aria-label="Ссылка на страницу личного кабинета текущего пользователя"
+                      >Личный кабинет</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <nav class="header-nav">
+              <!--меню навигации-->
+              <ul class="header-nav-list">
+                <li class="header-nav-list-item">
+                  <a class="header-nav-link" href="./index.html" aria-label="Ссылка на главную">
+                    Главная
+                  </a>
+                </li>
+                <li class="header-nav-list-item">
+                  <a
+                    class="header-nav-link"
+                    href=""
+                    aria-label="Ссылка на страницу с описанием компании техномарт"
+                  >
+                    Компания
+                  </a>
+                </li>
+                <li class="header-nav-list-item">
+                  <a
+                    class="header-nav-link"
+                    aria-label="Вы в каталоге"
+                  >
+                    Каталог
+                  </a>
+                </li>
+                <li class="header-nav-list-item">
+                  <a
+                    class="header-nav-link"
+                    href=""
+                    aria-label="Ссылка на новости компании техномарт"
+                  >
+                    Новости
+                  </a>
+                </li>
+                <li class="header-nav-list-item">
+                  <a
+                    class="header-nav-link"
+                    href=""
+                    aria-label="Ссылка на страницу со специпредложениями"
+                  >
+                    Спецпредложения
+                  </a>
+                </li>
+                <li class="header-nav-list-item">
+                  <a
+                    class="header-nav-link"
+                    href=""
+                    aria-label="Ссылка на страницу с информацией по доставке"
+                  >
+                    Доставка
+                  </a>
+                </li>
+                <li class="header-nav-list-item">
+                  <a
+                    class="header-nav-link"
+                    href=""
+                    aria-label="Ссылка на страницу с контактами"
+                  >
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
     <main>
+      <div class="center">
       <ul class="breadcrumbs-list">
         <li class="breadcrumbs-list-item">
           <a
@@ -248,10 +253,13 @@
         </li>
       </ul>
       <div class="title-block">
-        <h1 class="catalog-title">
+        <h1 class="title title-block-text">
           Перфораторы
         </h1>
       </div>
+    </div>
+    <div class="center">
+      <div class="catalog-wrapper">
       <section class="filter">
         <h2 class="filter-title">Фильтр:</h2>
         <form class="filter-form" method="POST">
@@ -392,7 +400,7 @@
                 >По функционалу</a
               >
             </li>
-            <li class="sorting-list-item">
+            <li class="sorting-list-item top-or-bottom">
               <a
                 class="sorting-button sorting-to-top"
                 aria-label="Отсортировать по возрастанию"
@@ -401,10 +409,8 @@
                   src="./img/icons/icon-up-dir.svg"
                   alt="Стрелка вверх"
               /></a>
-            </li>
-            <li class="sorting-list-item">
               <a
-                class="sorting-button sorting-to-top"
+                class="sorting-button sorting-to-bottom"
                 aria-label="Отсортировать по убыванию"
                 ><img
                   class="sorting-to-bottom-icon"
@@ -414,8 +420,8 @@
             </li>
           </ul>
         </div>
-        <div class="catalog-list">
-          <div class="item">
+        <div class="catalog-item-list">
+          <div class="item catalog-item">
             <div class="item-buttons">
               <a
                 class="item-buy"
@@ -444,7 +450,7 @@
               <span class="item-price">15500 Р.</span>
             </div>
           </div>
-          <div class="item">
+          <div class="item catalog-item">
             <a
               class="item-buy"
               aria-label="Кнопка добавить товар в корзину"
@@ -471,7 +477,7 @@
               <span class="item-price">25500 Р.</span>
             </div>
           </div>
-          <div class="item new">
+          <div class="item catalog-item new">
             <a
               class="item-buy"
               aria-label="Кнопка добавить товар в корзину"
@@ -497,7 +503,7 @@
               <span class="item-price">15500 Р.</span>
             </div>
           </div>
-          <div class="item">
+          <div class="item catalog-item">
             <a
               class="item-buy"
               aria-label="Кнопка добавить товар в корзину"
@@ -524,7 +530,7 @@
               <span class="item-price">15500 Р.</span>
             </div>
           </div>
-          <div class="item new">
+          <div class="item catalog-item new">
             <a
               class="item-buy"
               aria-label="Кнопка добавить товар в корзину"
@@ -551,7 +557,7 @@
               <span class="item-price">25500 Р.</span>
             </div>
           </div>
-          <div class="item">
+          <div class="item catalog-item">
             <a
               class="item-buy"
               aria-label="Кнопка добавить товар в корзину"
@@ -577,7 +583,7 @@
               <span class="item-price">12500 Р.</span>
             </div>
           </div>
-          <div class="item new">
+          <div class="item catalog-item new">
             <a
               class="item-buy"
               aria-label="Кнопка добавить товар в корзину"
@@ -604,7 +610,7 @@
               <span class="item-price">15500 Р.</span>
             </div>
           </div>
-          <div class="item">
+          <div class="item catalog-item">
             <a
               class="item-buy"
               aria-label="Кнопка добавить товар в корзину"
@@ -631,7 +637,7 @@
               <span class="item-price">25500 Р.</span>
             </div>
           </div>
-          <div class="item">
+          <div class="item catalog-item">
             <a
               class="item-buy"
               aria-label="Кнопка добавить товар в корзину"
@@ -667,12 +673,15 @@
             >Следующая</a
           >
         </div>
+      </div>
+      </div>
       </section>
-      <section class="about">
-        <h2 class="about-title">
+      <section class="about-item">
+        <div class="center">
+        <h2 class="title about-item-title">
           Пара слов о перфораторах
         </h2>
-        <p class="about-text">
+        <p class="about-item-text">
           Перфоратор — универсальный строительный инструмент. Предназначен для
           сверления и долбления отверстий в кирпиче, бетоне и камне.<br />
           Существуют электромеханические и пневматические перфораторы.
@@ -680,68 +689,61 @@
           отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»:
           в одном устройстве будут совмещены отбойный молоток и ударная дрель.
         </p>
+      </div>
       </section>
     </main>
     <footer class="footer">
+      <div class="center">
       <div class="footer-top">
-        <div class="footer-top-left">
           <div class="footer-logo">
-            <a class="footer-top-left-link footer-logo-link" href="./index.html"
+            <a class="footer-top-logo-link logo-link" href="./index.html"
               ><img
-                class="footer-logo-icon"
+                class="footer-logo-img"
                 src="./img/logo/logo-technomart.svg"
                 width="138"
                 height="23"
                 alt="На главную сайта Техномарт"
             /></a>
           </div>
-          <p>
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-            <a class="footer-top-left-link" href="tel:+7(812)555-05-55"
-              >+7 (812) 555-05-55</a
-            >
-          </p>
-        </div>
-        <div class="footer-top-right">
-          <ul class="footer-top-right-top-list">
-            <li class="footer-top-right-list">
+          <ul class="footer-top-list">
+            <li class="footer-top-list-item">
               <a
-                class="footer-top-right-top-link"
+                class="footer-top-link"
                 href=""
                 aria-label="Ссылка на страницу о компании техномарт"
               >
                 Компания
               </a>
             </li>
-            <li class="footer-top-right-list">
+            <li class="footer-top-list-item">
               <a
-                class="footer-top-right-top-link"
+                class="footer-top-link"
                 href=""
                 aria-label="Ссылка на страницу с новостями компании техномарт"
               >
                 Новости
               </a>
             </li>
-            <li class="footer-top-right-list">
+            <li class="footer-top-list-item">
               <a
-                class="footer-top-right-top-link"
-                aria-label="Ссылка на страницу каталога магазина техномарт"
+                class="footer-top-link"
+                aria-label="Вы в каталоге магазина техномарт"
               >
                 Каталог
               </a>
             </li>
-            <li class="footer-top-right-list">
+            <li class="footer-top-list-item">
               <a
-                class="footer-top-right-top-link"
+                class="footer-top-link"
                 href=""
                 aria-label="Ссылка на страницу с информации по доставке"
               >
                 Доставка
               </a>
             </li>
-            <li class="footer-top-right-list">
+            <li class="footer-top-list-item">
               <a
-                class="footer-top-right-top-link"
+                class="footer-top-link"
                 href=""
                 aria-label="Ссылка на страницу с контактами"
               >
@@ -749,37 +751,46 @@
               </a>
             </li>
           </ul>
-          <ul class="footer-top-right-bottom-list">
-            <li class="footer-top-right-list">
+
+        </div>
+        <div class="footer-middle">
+            <p class="footer-adress">
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+              <a class="footer-tel-link" href="tel:+7(812)555-05-55"
+                >+7 (812) 555-05-55</a
+              >
+            </p>
+          <ul class="footer-middle-list">
+            <li class="footer-middle-list-item">
               <a
-                class="footer-top-right-bottom-link"
+                class="footer-middle-link"
                 href=""
                 aria-label="Ссылка на категорию с материалами"
               >
                 Материалы
               </a>
             </li>
-            <li class="footer-top-right-list">
+            <li class="footer-middle-list-item">
               <a
-                class="footer-top-right-bottom-link"
+                class="footer-middle-link"
                 href=""
                 aria-label="Ссылка на категорию с техникой"
               >
                 Техника
               </a>
             </li>
-            <li class="footer-top-right-list">
+            <li class="footer-middle-list-item">
               <a
-                class="footer-top-right-bottom-link"
+                class="footer-middle-link"
                 href=""
                 aria-label="Ссылка на категорию с инструментами"
               >
                 Инструмент
               </a>
             </li>
-            <li class="footer-top-right-list">
+            <li class="footer-middle-list-item">
               <a
-                class="footer-top-right-bottom-link"
+                class="footer-middle-link"
                 href=""
                 aria-label="Ссылка на категорию со спецпредложениями"
               >
@@ -789,57 +800,62 @@
           </ul>
         </div>
       </div>
+      </div>
       <div class="footer-bottom">
-        <p class="footer-bottom-copyright">
-          © 2010-2016 Компания «Техномарт» Все права защищены
-        </p>
-        <ul class="footer-bottom-socials">
-          <li class="footer-bottom-socials-item">
-            <a
-              class="social social-button-vk"
-              href=""
-              aria-label="Ссылка на нашу группу во ВКонтакте"
-            ></a>
-          </li>
-          <li class="footer-bottom-socials-item">
-            <a
-              class="social social-button-fb"
-              href=""
-              aria-label="Ссылка на нашу страницу в Фейсбуке"
-            ></a>
-          </li>
-          <li class="footer-bottom-socials-item">
-            <a
-              class="social social-button-inst"
-              href=""
-              aria-label="Ссылка на нашу страницу в Инстаграмме"
-            ></a>
-          </li>
-        </ul>
-        <div class="footer-bottom-communication">
-          <div class="footer-bottom-communication-feedback">
-            <p>
-              Обратная связь:
+        <div class="center">
+          <div class="footer-bottom-wrapper">
+            <p class="footer-bottom-copyright">
+              © 2010-2016 Компания «Техномарт» Все права защищены
             </p>
-            <p>
-              Разработано —
-            </p>
-          </div>
-          <div class="footer-bottom-communication-links">
-            <a
-              class="footer-bottom-communication-link"
-              href=""
-              aria-label="Почта разработчика сайта"
-            >
-              mail@htmlacademy.ru
-            </a>
-            <a
-              class="footer-bottom-communication-link"
-              href=""
-              aria-label="Сайт разработчика сайта"
-            >
-              htmlacademy.ru
-            </a>
+            <ul class="footer-bottom-socials">
+              <li class="footer-bottom-socials-item">
+                <a
+                  class="social social-button-vk"
+                  href=""
+                  aria-label="Ссылка на нашу группу во ВКонтакте"
+                ></a>
+              </li>
+              <li class="footer-bottom-socials-item">
+                <a
+                  class="social social-button-fb"
+                  href=""
+                  aria-label="Ссылка на нашу страницу в Фейсбуке"
+                ></a>
+              </li>
+              <li class="footer-bottom-socials-item">
+                <a
+                  class="social social-button-inst"
+                  href=""
+                  aria-label="Ссылка на нашу страницу в Инстаграмме"
+                ></a>
+              </li>
+            </ul>
+            <div class="footer-bottom-communication">
+              <div class="footer-bottom-communication-feedback">
+                <p>
+                  Обратная связь:
+                </p>
+                <a
+                    class="footer-bottom-communication-link"
+                    href=""
+                    aria-label="Почта разработчика сайта"
+                  >
+                    mail@htmlacademy.ru
+                  </a>
+              </div>
+                <div class="footer-bottom-communication-author">
+                  <p>
+                  Разработано —
+                </p>
+                  <a
+                    class="footer-bottom-communication-link"
+                    href=""
+                    aria-label="Сайт разработчика сайта"
+                  >
+                    htmlacademy.ru
+                  </a>
+                </div>
+                </div>
           </div>
         </div>
       </div>
