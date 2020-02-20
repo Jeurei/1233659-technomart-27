@@ -1061,6 +1061,7 @@ a {
 .filter-range-values {
   display: flex;
   justify-content: center;
+  font-size: 17px;
   align-items: center;
 }
 .filter-range-values-input {
