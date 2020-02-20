@@ -2,6 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,intial-scale=1">
+
     <title>Техномарт:Каталог</title>
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -477,7 +479,7 @@
               <span class="item-price">25500 Р.</span>
             </div>
           </div>
-          <div class="item catalog-item new">
+          <div class="item catalog-item new new-item">
             <a
               class="item-buy"
               aria-label="Кнопка добавить товар в корзину"
@@ -530,7 +532,7 @@
               <span class="item-price">15500 Р.</span>
             </div>
           </div>
-          <div class="item catalog-item new">
+          <div class="item catalog-item new new-item">
             <a
               class="item-buy"
               aria-label="Кнопка добавить товар в корзину"
@@ -583,7 +585,7 @@
               <span class="item-price">12500 Р.</span>
             </div>
           </div>
-          <div class="item catalog-item new">
+          <div class="item catalog-item new new-item">
             <a
               class="item-buy"
               aria-label="Кнопка добавить товар в корзину"
@@ -861,16 +863,18 @@
       </div>
     </footer>
     <section class="modal-adding-popup visually-hidden">
-      <h2 class="visually-hidden">Вы добавили товар в корзину</h2>
+      <div class="center">
       <div class="adding-popup">
+        <h2 class="title adding-popup-title">Товар добавлен в корзину</h2>
+        <div class="buttons-field">
+          <div class="buttons">
         <button
           class="close-button"
           aria-label="Кнопка закрыть попап с добавлением в корзину"
         >
-          закрыть
         </button>
         <button
-          class="button continue-button"
+          class="button adding-popup-button"
           aria-label="Кнопка продолжить покупки"
         >
           Продолжить покупки
@@ -881,7 +885,10 @@
           aria-label="Ссылка на страницу с оформлением заказа"
           >Оформить заказ</a
         >
+        </div>
+        </div>
       </div>
+    </div>
     </section>
   </body>
 </html>

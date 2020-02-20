@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,intial-scale=1">
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
@@ -213,7 +214,7 @@
         <h2 class="visually-hidden">Категории</h2>
         <div class="center">
           <div class="catergories-top-wrapper">
-        <div class="category row-category category-materials new">
+        <div class="category row-category category-materials new new-category">
           <h3 class="title category-title">Материалы</h3>
           <a
             href=""
@@ -406,7 +407,7 @@
               <span class="item-price">22500 Р.</span>
             </div>
           </div>
-          <div class="item popular-item new">
+          <div class="item popular-item new new-item">
             <a
               class="item-buy"
               aria-label="Кнопка добавить товар в корзину"
@@ -675,7 +676,7 @@
             class="button contacts-button"
             aria-label="Кнопка открытия формы обратной связи"
             aria-haspopup="true"
-            >Заблудились?Напишите нам!</a
+            >Заблудились? Напишите нам!</a
           >
         </div>
       </div>
@@ -857,17 +858,17 @@
         <!--940x446-->
         <button
           type="button"
-          class="map-close-button"
+          class="close-button"
           aria-label="Кнопка закрыть интерактивную карту"
         >
-          закрыть
         </button>
       </div>
     </section>
     <section class="contact-form-popup visually-hidden">
+      <div class="center">
       <h2 class="visually-hidden">Контактная форма</h2>
-      <div class="contact-form-block">
         <form class="contact-form" method="POST">
+          <div class="contact-form-name-field">
           <label class="contact-form-label" for="name-field">Ваше имя:</label>
           <input
             class="contact-form-input"
@@ -878,7 +879,9 @@
             aria-required="true"
             required
           />
-          <label class="contact-form" for="email-field">Ваш e-mail:</label>
+        </div>
+        <div class="contact-form-email-field">
+          <label class="contact-form-label" for="email-field">Ваш e-mail:</label>
           <input
             class="contact-form-input"
             type="email"
@@ -890,12 +893,15 @@
             aria-required="true"
             required
           />
-          <p>
+        </div>
+          <p class="textarea-block">
+            <label for="contact-textarea" class="contact-form-label textarea-label">Текст письма</label>
             <textarea
               rows="10"
               cols="45"
-              class="contact-form-textarea"
+              class="contact-form-input contact-form-textarea"
               name="text"
+              id="contact-textarea"
               placeholder="В свободной форме"
               aria-describedby="textarea-placeholder"
             ></textarea>
@@ -903,6 +909,8 @@
           <p id="textarea-placeholder" class="visually-hidden">
             Введите ваше сообщение в свободной форме
           </p>
+          <div class="submit-field">
+            <div class="submit-block">
           <button
             type="submit"
             class="button contact-form-button"
@@ -910,8 +918,16 @@
           >
             Отправить
           </button>
+        </div>
+        </div>
+        <button
+          type="button"
+          class="close-button"
+          aria-label="Кнопка закрыть интерактивную карту"
+        >
+        </button>
         </form>
-      </div>
+    </div>
     </section>
   </body>
 </html>
