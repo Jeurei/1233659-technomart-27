@@ -1144,6 +1144,7 @@ a {
   background-repeat: no-repeat;
 }
 .slides {
+  position: relative;
   font-family: "Cuprum", Tahoma, sans-serif;
 }
 .slide-text-block {
@@ -1176,20 +1177,21 @@ a {
 }
 
 .slider-control {
+  display: flex;
+  position: absolute;
   list-style: none;
+  top: 74%;
+  left: 255px;
 }
 .slider-radio-button {
   width: 10px;
-  height: 10px;
-  position: absolute;
-  background-color: transparent;
+  height: 15px;
+  border-color: #fff;
+  background-color: #fff;
   border-radius: 50%;
+  margin-right: 10px;
 }
-/* и цвет не меняют если нажать,кст его наверное можно тоже под toggle сделать */
-.slider-button-selected {
-  background-color: #ee3643;
-}
-/* В общем,нашёл кучу материала как оформить красиво,но мне кажется по тз это не требуется,поэтому пришла идея в js c помощью .toggle менять класса .visually-hidden у слайдера,а со стрелочками делать проверку например,остаются вопросы только про button-ы */
+
 .slide-1 {
   background-image: url(../img/decor/Layer99.jpg);
   background-size: cover;
@@ -1198,23 +1200,26 @@ a {
   background-image: url(../img/decor/Layer991.jpg);
   background-size: cover;
 }
-.arrows {
+.slider-arrows {
   position: absolute;
+  top: 40%;
+  left: 25px;
 }
 .arrow {
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 35px;
+  height: 35px;
 
   vertical-align: middle;
-
+  border-radius: 3px;
   background-color: transparent;
   border: none;
-  border-top: 2px solid #000000;
-  border-right: 2px solid #000000;
+  border-top: 4px solid #fff;
+  border-right: 4px solid #fff;
 }
 .slider-arrow-right {
   transform: rotate(45deg);
+  left: 530px;
 }
 .slider-arrow-left {
   transform: rotate(-135deg);
@@ -1292,10 +1297,20 @@ a {
 }
 /* как сделать тень? */
 .services-list {
+  position: relative;
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+.services-list::after {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  content: "";
+  box-shadow: inset 0 0 6px;
 }
 .services-button {
   display: flex;
