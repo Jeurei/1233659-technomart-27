@@ -1047,6 +1047,7 @@ a {
 }
 .filter-range-slider {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   margin-bottom: 9px;
@@ -1056,7 +1057,50 @@ a {
   background-color: #f7f3ec;
 }
 .filter-range-slider-input {
-  width: 180px;
+  display: none;
+  /* width: 180px; */
+}
+.filter-range-slider::before {
+  position: absolute;
+  left: 28px;
+  content: "";
+  top: 50%;
+  width: 152px;
+  height: 2px;
+  background-color: #00ca74;
+}
+.filter-range-slider::after {
+  width: 22px;
+  height: 2px;
+  top: 50%;
+  content: "";
+  position: absolute;
+  background-color: #d7dcde;
+  left: 179px;
+}
+.range-pin {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 5;
+  background-color: #fff;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+  width: 20px;
+  height: 20px;
+}
+.range-pin:first-of-type {
+  left: 20px;
+}
+.range-pin:last-of-type {
+  left: 160px;
+}
+.range-pin::before {
+  content: "•";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: -2px;
+  left: 7px;
 }
 .filter-range-values {
   display: flex;
