@@ -117,35 +117,43 @@ a {
 .search-form {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
 }
-.header-search-button {
-  order: -1;
-  width: 17px;
-  height: 17px;
-  margin-right: 15px;
-  margin-left: 17px;
 
-  font-family: inherit;
+.header-search-input {
+  width: 100%;
+  height: 42px;
+  outline: 0;
+  font: inherit;
 
   background-color: transparent;
   border: none;
 }
-.header-search-input {
-  width: 100%;
-  height: 42px;
-
-  font: inherit;
-
-  background-color: #293449;
-  border: none;
-}
-.header-search-input:hover {
+.header-search:hover {
   background-color: #212a3a;
 }
 .header-search-input:focus {
   background-color: #ffffff;
 }
+
+.header-search:hover .header-search-button {
+  color: #fff;
+  background-color: #212a3a;
+}
+.header-search-input:focus + .header-search-button {
+  background-color: #fff;
+  color: #ee3643;
+}
+.header-search-button {
+  order: -1;
+  padding-left: 17px;
+  padding-right: 15px;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+}
+
 .header-link {
   display: flex;
   flex-grow: 1;
@@ -157,7 +165,10 @@ a {
 
   color: #ffffff;
 }
-.full {
+.header-link:hover .header-icon {
+  opacity: 0.5;
+}
+.header-wrapper .active {
   background-color: #ee3643;
 }
 .header-icon {
@@ -264,6 +275,7 @@ a {
 }
 .header-tel-icon {
   position: absolute;
+  top: 10px;
   left: 15px;
 }
 /* Я правильно паддинги использую? */
@@ -297,9 +309,19 @@ a {
   padding-bottom: 15px;
   padding-left: 50px;
 }
+
 .header-user-icon {
   position: absolute;
   left: 14px;
+  top: 14px;
+  color: #32425c;
+  opacity: 0.5;
+}
+.header-user-link:hover .header-user-icon {
+  opacity: 1;
+}
+.header-user-link:active .header-user-icon {
+  opacity: 0.5;
 }
 .header-user-block-logged {
   display: flex;
@@ -327,9 +349,13 @@ a {
 }
 /* точка */
 .header-user-nav-item:first-of-type::after {
-  content: "•";
+  content: "";
+  width: 4px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #32425c;
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 120%;
 }
 .header-logout-button {
@@ -341,6 +367,21 @@ a {
   padding-left: 40px;
 
   background-color: #ffffff;
+}
+.header-logout-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #32425c;
+  opacity: 0.5;
+}
+.header-logout-icon:hover {
+  opacity: 1;
+}
+.header-logout-icon:active {
+  opacity: 0.5;
 }
 .login-button {
   position: relative;
@@ -367,6 +408,9 @@ a {
   font-size: 16px;
   color: #32425c;
   text-decoration: underline;
+}
+.header-user-nav-link:hover {
+  color: rgba(238, 54, 67, 1);
 }
 .header-user-nav-link:active {
   color: rgba(50, 66, 92, 0.3);
@@ -507,12 +551,12 @@ a {
 }
 .close-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 9px;
+  right: 9px;
   z-index: 3;
 
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 25px;
 
   background-color: transparent;
   border-color: transparent;
@@ -521,8 +565,8 @@ a {
 .close-button::after {
   content: " ";
   position: absolute;
-  left: 0;
-
+  top: 0;
+  left: 7px;
   width: 3px;
   height: 21px;
 
@@ -776,7 +820,7 @@ a {
 }
 .footer-bottom {
   padding-top: 39px;
-
+  padding-bottom: 33px;
   font-size: 16px;
   color: #ffffff;
 
@@ -1092,9 +1136,11 @@ a {
   height: 20px;
 }
 .range-pin:first-of-type {
+  top: 20%;
   left: 20px;
 }
 .range-pin:last-of-type {
+  top: 20%;
   left: 160px;
 }
 .range-pin::before {
@@ -1262,9 +1308,78 @@ a {
   margin-top: 21px;
   margin-bottom: 21px;
 }
+.item-button-container {
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  padding-top: 44px;
+  padding-right: 42px;
+  padding-left: 43px;
+  padding-bottom: 44px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.item:hover .item-button-container {
+  z-index: 1;
+  opacity: 1;
+}
+.item:hover .item-image {
+  z-index: -1;
+}
+
 .item-buy,
 .item-bookmark {
-  display: none;
+  font-family: "Cuprum", Tahoma, sans-serif;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  width: 135px;
+  padding: 7px 0 7px 0;
+}
+.item-buy {
+  position: relative;
+  color: #fff;
+  background-color: #63a63e;
+  margin-bottom: 8px;
+  padding: 10px 0 10px 0;
+  box-shadow: 0px 3px 0 0 #367315;
+}
+.item-buy:hover {
+  background-color: #5fbb2d;
+}
+.item-but:active {
+  background-color: #518534;
+}
+.item-buy::before {
+  position: absolute;
+  top: 25%;
+  left: 14px;
+  opacity: 0.5;
+  content: url(../img/icons/icon-cart.svg);
+}
+.item-buy:hover::before {
+  opacity: 1;
+}
+.item-bookmark {
+  color: #32425c;
+  background-color: #fff;
+  border: 3px solid #63a63e;
+}
+.item-bookmark:hover {
+  border: solid 3px #32425c;
+}
+.item-bookmark:active {
+  opacity: 0.3;
 }
 .new {
   position: relative;
@@ -1313,7 +1428,7 @@ a {
   width: 220px;
   margin-right: 20px;
   margin-bottom: 21px;
-
+  position: relative;
   border: 1px solid #e5e5e5;
 }
 .catalog-item:nth-of-type(3n) {
@@ -1326,6 +1441,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
 }
 .item-title {
   width: 160px;
@@ -1587,7 +1703,8 @@ a {
 }
 .arrow {
   position: absolute;
-
+  top: 0;
+  left: 0;
   width: 35px;
   height: 35px;
 
@@ -1660,7 +1777,7 @@ a {
 .slide {
   display: none;
 }
-.slide-selected {
+.slides .active {
   display: flex;
   flex-direction: column;
   min-height: 270px;
@@ -1734,12 +1851,12 @@ a {
 .services-button:hover {
   background-color: #293449;
 }
-.services-button-selected {
+.services-list-item .active {
   color: #32425c;
 
   background-color: #ffffff;
 }
-.services-button-selected:hover {
+.services .active:hover {
   background-color: #ffffff;
 }
 .services-block {
@@ -1751,7 +1868,7 @@ a {
   background-repeat: no-repeat;
   background-position: right;
 }
-.services-block-right-selected {
+.services-block-right .active {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
