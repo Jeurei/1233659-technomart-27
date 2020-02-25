@@ -6,7 +6,12 @@ function initMap(ymaps) {
     }),
     myPlacemark = new ymaps.Placemark(coordinates);
   myMap.controls.remove(`trafficControl`);
+  myMap.setType("yandex#map");
   myMap.controls.remove(`typeSelector`);
   myMap.controls.remove(`fullscreenControl`);
+  myMap.controls.remove(`searchControl`);
+  myMap.controls.remove(`geolocationControl`);
+  myMap.controls.remove(`zoomControl`);
+  myMap.controls.remove(`rulerControl`);
   myMap.geoObjects.add(myPlacemark);
 }
