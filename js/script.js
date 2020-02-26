@@ -1,21 +1,88 @@
+let isStorageSupport=true
+try{
+  let name=localStorage.getItem(`name`)
+}
+catch(err){
+  isStorageSupport=false
+}
+window.addEventListener(`keydown`,function(evt){
+  if(evt.keyCode===27){
+    if(document.querySelectorAll('.popup'))
+    document.querySelectorAll('.popup').forEach(function(el){
+      if(!el.classList.contains(`visually-hidden`)){
+        evt.preventDefault();
+        el.classList.add(`visually-hidden`)
+      }
+      el.querySelector(`.modal`).classList.remove('modal-show')
+      el.querySelector(`.modal`).classList.remove('modal-eror')
+    })
 
+  }
+})
 let button=document.querySelector(".contacts-button")
 if(button){
-button.addEventListener(`click`,function(evt){
-  evt.preventDefault();
-  document.querySelector(`.contact-form-popup`).classList.remove(`visually-hidden`);
-})}
+  let popup=document.querySelector(`.contact-form-popup`)
+  if(popup){
+  let name=popup.querySelector('[name=name-field]')
+  let email=popup.querySelector('[name=email-field]')
+  let text=popup.querySelector('[name=text]')
+  button.addEventListener(`click`,function(evt){
+    evt.preventDefault()
+    document.querySelector(`.contact-form-popup`).classList.remove(`visually-hidden`)
+    document.querySelector(`.contact-form`).classList.add(`modal-show`)
+    if(isStorageSupport){
+    if(localStorage.getItem(`name`)){
+      name.value=localStorage.getItem(`name`)
+      if(storage=localStorage.getItem(`email`)){
+        email.value=localStorage.getItem(`email`)
+        text.focus()
+      }
+      else{
+        email.focus()
+      }
+    }
+    else{
+      name.focus()
+    }
+  }})
+  document.querySelector(`.contact-form`).addEventListener(`submit`,function(evt){
+  if(!name.value||!email.value||!text.value){
+    evt.preventDefault();
+    this.classList.remove(`modal-eror`)
+    this.offsetWidth=this.offsetWidth
+    this.classList.add(`modal-eror`)
+    if(!name.value){
+      name.focus()
+    }
+    else{
+      if(!email.value){
+        email.focus()
+      }
+      else{
+        text.focus();
+      }
+    }
+
+  }
+  else{
+    localStorage.setItem(`name`,name.value)
+    localStorage.setItem(`email`,email.value)
+  }
+})}}
 button=document.querySelector(".js-map")
 if(button){
 button.addEventListener(`click`,function(evt){
   evt.preventDefault();
   document.querySelector(`.map-popup`).classList.remove(`visually-hidden`);
+  document.querySelector(`.modal-map`).classList.add(`modal-show`)
 })}
 button=document.querySelectorAll(`.close-button`)
 if(button.length!=0){
 button.forEach(el=>el.addEventListener(`click`,function(evt){
   evt.preventDefault();
   el.parentElement.parentElement.classList.toggle('visually-hidden')
+  el.parentElement.classList.remove('modal-show')
+  el.parentElement.classList.remove('modal-eror')
 }))}
 button=document.querySelectorAll(`.item-buy`)
 if(button.length!=0){
@@ -25,6 +92,7 @@ button.forEach(el=>el.addEventListener(`click`,function(evt){
     !document.querySelector(`.header-basket`).classList.add(`active`)
   }
   document.querySelector(`.modal-adding-popup`).classList.remove(`visually-hidden`)
+  document.querySelector(`.adding-popup`).classList.add(`modal-show`)
   let num=parseInt(document.querySelector(`.header-basket-js-num`).textContent)
   num++
   document.querySelector(`.header-basket-js-num`).textContent=num
@@ -135,18 +203,3 @@ if(button.length!=0){
     this.classList.add(`active`)
   }))
 }
-let popup=document.querySelector(`.contact-form-popup`)
-if(popup){
-  document.querySelector(`.contact-form`).addEventListener(`submit`,function(evt){
-  let name=this.querySelector('[name=name-field]')
-  let email=this.querySelector('[name=email-field]')
-  let text=this.querySelector('[name=text]')
-  if(!name.value||!email.value||!text.value){
-    evt.preventDefault();
-    this.classList.add(`shake`)
-  }
-  else{
-    evt.preventDefault();
-    this.parentElement.classList.add(`visually-hidden`)
-  }
-})}
