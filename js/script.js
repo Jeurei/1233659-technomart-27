@@ -1,4 +1,4 @@
-window.onload=function(){
+
 let button=document.querySelector(".contacts-button")
 if(button){
 button.addEventListener(`click`,function(evt){
@@ -134,4 +134,19 @@ if(button.length!=0){
     button.forEach(el=>el.classList.remove(`active`))
     this.classList.add(`active`)
   }))
-}}
+}
+let popup=document.querySelector(`.contact-form-popup`)
+if(popup){
+  document.querySelector(`.contact-form`).addEventListener(`submit`,function(evt){
+  let name=this.querySelector('[name=name-field]')
+  let email=this.querySelector('[name=email-field]')
+  let text=this.querySelector('[name=text]')
+  if(!name.value||!email.value||!text.value){
+    evt.preventDefault();
+    this.classList.add(`shake`)
+  }
+  else{
+    evt.preventDefault();
+    this.parentElement.classList.add(`visually-hidden`)
+  }
+})}
