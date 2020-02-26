@@ -2534,10 +2534,12 @@ img {
 .slide-1 {
   background-image: url(../img/decor/Layer99.jpg);
   background-size: cover;
+  background-color: #000;
 }
 .slide-2 {
   background-image: url(../img/decor/Layer991.jpg);
   background-size: cover;
+  background-color: #000;
 }
 .slider-arrows {
   position: absolute;
