@@ -27,7 +27,11 @@
               /></a>
             </div>
             <div class="header-search">
-              <form class="search-form" method="post">
+              <form
+                class="search-form"
+                method="post"
+                action="https://echo.htmlacademy.ru"
+              >
                 <input
                   type="search"
                   id="site-search"
@@ -298,7 +302,7 @@
           </li>
         </ul>
         <div class="title-block">
-          <h1 class="title title-block-text">
+          <h1 class="title title-block-text catalog-big-title">
             Перфораторы
           </h1>
         </div>
@@ -307,7 +311,11 @@
         <div class="catalog-wrapper">
           <section class="filter">
             <h2 class="filter-title">Фильтр:</h2>
-            <form class="filter-form" method="POST">
+            <form
+              class="filter-form"
+              method="GET"
+              action="https://echo.htmlacademy.ru"
+            >
               <fieldset class="filter-fieldset filter-range-fieldset">
                 <legend class="filter-legend">Цена:</legend>
                 <div class="filter-range-slider">
@@ -404,7 +412,9 @@
                 </ul>
               </fieldset>
               <fieldset class="filter-fieldset">
-                <legend class="filter-legend filter-source-legend">Питание:</legend>
+                <legend class="filter-legend filter-source-legend">
+                  Питание:
+                </legend>
                 <ul class="filter-source-list">
                   <li class="filter-source-list-item">
                     <input
@@ -952,29 +962,29 @@
       </div>
     </footer>
     <section class="popup modal-adding-popup visually-hidden">
-        <div class="modal adding-popup">
-          <h2 class="title adding-popup-title">Товар добавлен в корзину</h2>
-          <div class="buttons-field">
-            <div class="buttons">
-              <a
-                class="button adding-popup-button"
-                href=""
-                aria-label="Ссылка на страницу с оформлением заказа"
-                >Оформить заказ</a
-              >
-              <button
-                class="button adding-popup-button adding-popup-button-continue"
-                aria-label="Кнопка продолжить покупки"
-              >
-                Продолжить покупки
-              </button>
-            </div>
+      <div class="modal adding-popup">
+        <h2 class="title adding-popup-title">Товар добавлен в корзину</h2>
+        <div class="buttons-field">
+          <div class="buttons">
+            <a
+              class="button adding-popup-button"
+              href=""
+              aria-label="Ссылка на страницу с оформлением заказа"
+              >Оформить заказ</a
+            >
+            <button
+              class="button adding-popup-button adding-popup-button-continue"
+              aria-label="Кнопка продолжить покупки"
+            >
+              Продолжить покупки
+            </button>
           </div>
-          <button
+        </div>
+        <button
           class="close-button"
           aria-label="Кнопка закрыть попап с добавлением в корзину"
         ></button>
-        </div>
+      </div>
     </section>
     <script src="./js/script-minified.js"></script>
   </body>

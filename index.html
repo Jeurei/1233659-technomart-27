@@ -27,7 +27,11 @@
               /></a>
             </div>
             <div class="header-search">
-              <form class="search-form" method="post">
+              <form
+                class="search-form"
+                method="post"
+                action="https://echo.htmlacademy.ru"
+              >
                 <input
                   type="search"
                   id="site-search"
@@ -615,18 +619,28 @@
               </ul>
             </div>
             <div class="services-block-right">
-              <div class="service services-block-right-delivery active" data-service_id="1">
+              <div
+                class="service services-block-right-delivery active"
+                data-service_id="1"
+              >
                 <h3 class="title services-block-right-title">Доставка</h3>
-                <p class="services-block-right-text services-block-right-text-delivery">
+                <p
+                  class="services-block-right-text services-block-right-text-delivery"
+                >
                   Мы с удовольствием доставим ваш товар прямо<br />
                   к вашему подъезду совершенно бесплатно! Ведь мы неплохо
                   заработаем,<br />
                   поднимая его на ваш этаж!
                 </p>
               </div>
-              <div class="service services-block-right-gurantee" data-service_id="2">
+              <div
+                class="service services-block-right-gurantee"
+                data-service_id="2"
+              >
                 <h3 class="services-block-right-title">Гарантия</h3>
-                <p class="services-block-right-text services-block-right-text-gurantee">
+                <p
+                  class="services-block-right-text services-block-right-text-gurantee"
+                >
                   Если купленный у нас товар поломается или заискрит,<br />
                   а также в случае пожара, спровоцированного его возгоранием, вы
                   всегда можете быть уверены в нашей гарантии. Мы обменяем
@@ -634,10 +648,15 @@
                   Дом уж восстановите как-нибудь сами.
                 </p>
               </div>
-              <div class="service services-block-right-credit" data-service_id="3">
+              <div
+                class="service services-block-right-credit"
+                data-service_id="3"
+              >
                 <h3 class="services-block-right-title ">Кредит</h3>
-                <p class="services-block-right-text services-block-right-text-credit">
-                  Залезть в долговую яму стало проще!<br>
+                <p
+                  class="services-block-right-text services-block-right-text-credit"
+                >
+                  Залезть в долговую яму стало проще!<br />
                   Кредитные консультанты придут вам на помощь.
                 </p>
                 <a
@@ -903,72 +922,76 @@
       </div>
     </section>
     <section class="popup  contact-form-popup visually-hidden">
-        <h2 class="visually-hidden">Контактная форма</h2>
-        <form class="modal contact-form" method="POST">
-          <div class="contact-form-name-field">
-            <label class="contact-form-label" for="name-field">Ваше имя:</label>
-            <input
-              class="contact-form-input"
-              type="text"
-              name="name-field"
-              id="name-field"
-              placeholder="Имя фамилия"
-              aria-required="true"
-              required
-            />
-          </div>
-          <div class="contact-form-email-field">
-            <label class="contact-form-label" for="email-field"
-              >Ваш e-mail:</label
+      <h2 class="visually-hidden">Контактная форма</h2>
+      <form
+        class="modal contact-form"
+        method="POST"
+        action="https://echo.htmlacademy.ru"
+      >
+        <div class="contact-form-name-field">
+          <label class="contact-form-label" for="name-field">Ваше имя:</label>
+          <input
+            class="contact-form-input"
+            type="text"
+            name="name-field"
+            id="name-field"
+            placeholder="Имя фамилия"
+            aria-required="true"
+            required
+          />
+        </div>
+        <div class="contact-form-email-field">
+          <label class="contact-form-label" for="email-field"
+            >Ваш e-mail:</label
+          >
+          <input
+            class="contact-form-input"
+            type="email"
+            name="email-field"
+            id="email-field"
+            lang="en"
+            size="30"
+            placeholder="email@example.com"
+            aria-required="true"
+            required
+          />
+        </div>
+        <p class="textarea-block">
+          <label
+            for="contact-textarea"
+            class="contact-form-label textarea-label"
+            >Текст письма</label
+          >
+          <textarea
+            rows="10"
+            cols="45"
+            class="contact-form-input contact-form-textarea"
+            name="text"
+            id="contact-textarea"
+            placeholder="В свободной форме"
+            aria-describedby="textarea-placeholder"
+          ></textarea>
+        </p>
+        <p id="textarea-placeholder" class="visually-hidden">
+          Введите ваше сообщение в свободной форме
+        </p>
+        <div class="submit-field">
+          <div class="submit-block">
+            <button
+              type="submit"
+              class="button contact-form-button"
+              aria-label="Кнопка отправить форму с письмом"
             >
-            <input
-              class="contact-form-input"
-              type="email"
-              name="email-field"
-              id="email-field"
-              lang="en"
-              size="30"
-              placeholder="email@example.com"
-              aria-required="true"
-              required
-            />
+              Отправить
+            </button>
           </div>
-          <p class="textarea-block">
-            <label
-              for="contact-textarea"
-              class="contact-form-label textarea-label"
-              >Текст письма</label
-            >
-            <textarea
-              rows="10"
-              cols="45"
-              class="contact-form-input contact-form-textarea"
-              name="text"
-              id="contact-textarea"
-              placeholder="В свободной форме"
-              aria-describedby="textarea-placeholder"
-            ></textarea>
-          </p>
-          <p id="textarea-placeholder" class="visually-hidden">
-            Введите ваше сообщение в свободной форме
-          </p>
-          <div class="submit-field">
-            <div class="submit-block">
-              <button
-                type="submit"
-                class="button contact-form-button"
-                aria-label="Кнопка отправить форму с письмом"
-              >
-                Отправить
-              </button>
-            </div>
-          </div>
-          <button
-            type="button"
-            class="close-button"
-            aria-label="Кнопка закрыть интерактивную карту"
-          ></button>
-        </form>
+        </div>
+        <button
+          type="button"
+          class="close-button"
+          aria-label="Кнопка закрыть интерактивную карту"
+        ></button>
+      </form>
     </section>
     <section class="popup modal-adding-popup visually-hidden">
       <div class="modal adding-popup">
@@ -990,18 +1013,17 @@
           </div>
         </div>
         <button
-        class="close-button"
-        aria-label="Кнопка закрыть попап с добавлением в корзину"
-      ></button>
+          class="close-button"
+          aria-label="Кнопка закрыть попап с добавлением в корзину"
+        ></button>
       </div>
-  </section>
-  <script src="./js/map-minified.js"></script>
-  <script src="./js/script-minified.js">
-  </script>
-  <script
-    src="https://api-maps.yandex.ru/2.1/?apikey=6deaa343-00b8-4c42-b56f-c894454a66d9&lang=ru_RU&onload=initMap"
-    async
-    defer
-  ></script>
+    </section>
+    <script src="./js/map-minified.js"></script>
+    <script src="./js/script-minified.js"></script>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=6deaa343-00b8-4c42-b56f-c894454a66d9&lang=ru_RU&onload=initMap"
+      async
+      defer
+    ></script>
   </body>
 </html>
